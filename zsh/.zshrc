@@ -1,41 +1,72 @@
-# https://github.com/zsh-users/zsh-syntax-highlighting
-[[ -f $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Path to your oh-my-zsh configuration.
+ZSH=/usr/share/oh-my-zsh/
 
-ZSH=$HOME/.zsh
-for config_file ($ZSH/lib/*.zsh) source $config_file	# load zsh specific stuff
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="cypher"
 
-for i in aliases bashrc2 commonrc functions zsh; do
-	[[ -f $HOME/.$i ]] && . $HOME/.$i;
-done
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-PROMPT='%(!.%{$fg[cyan]%}.%{$fg[white]%}%n@)%m %{$fg[yellow]%}%(!.%1~.%~) %#%{$reset_color%} '
-#PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[white]%}facade@)%m %{$fg_bold[blue]%}%(!.%1~.%~) %#%{$reset_color%} '
+# Set to this to use case-sensitive completion
+CASE_SENSITIVE="true"
 
-REPORTTIME=5	# report about cpu-/system-/user-time of command if running longer than 5 seconds
-autoload -U compinit
+# Comment this out to disable bi-weekly auto-update checks
+DISABLE_AUTO_UPDATE="true"
+
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(vi-mode systemd zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+#
+#
+# PERSONAL STUFF
+
+# Autoload modules.
+autoload -U compinit promptinit
 compinit -i
-zstyle ':completion:*' rehash yes
+promptinit
 
-# # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # personal stuff ported over from .bashrc # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # #
+# Enable "command not found" hook.
+source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # fortunemod
 command fortune
 
-# default browser
-if [ -n "$DISPLAY" ]; then
-	BROWSER=/usr/bin/chromium
-else
-	BROWSER=/usr/bin/links
-fi
-
-# custom aliases
-alias ls='ls --color=auto'
+# Custom aliases.
 alias pingoo='ping www.google.com'
 alias mc='mc -b'
+alias ...='../..'
+alias ....='../../..'
 
-# less colours for man pages
+# Enable less colours for man pages.
 man() {
     env \
         LESS_TERMCAP_mb=$(printf "\e[1;31m") \
@@ -48,3 +79,18 @@ man() {
             man "$@"
 }
 
+# Allow special keybindings gotten from zkbd.
+autoload zkbd
+source ~poltak/.zkbd/screen-256color-:0.0 # may be different - check where zkbd saved yours
+# Bindkeys if not already bound.
+[[ -n ${key[Backspace]} ]] && bindkey "${key[Backspace]}" backward-delete-char
+[[ -n ${key[Insert]} ]] && bindkey "${key[Insert]}" overwrite-mode
+[[ -n ${key[Home]} ]] && bindkey "${key[Home]}" beginning-of-line
+[[ -n ${key[PageUp]} ]] && bindkey "${key[PageUp]}" up-line-or-history
+[[ -n ${key[Delete]} ]] && bindkey "${key[Delete]}" delete-char
+[[ -n ${key[End]} ]] && bindkey "${key[End]}" end-of-line
+[[ -n ${key[PageDown]} ]] && bindkey "${key[PageDown]}" down-line-or-history
+[[ -n ${key[Up]} ]] && bindkey "${key[Up]}" up-line-or-search
+[[ -n ${key[Left]} ]] && bindkey "${key[Left]}" backward-char
+[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
+[[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char

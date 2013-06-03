@@ -1,4 +1,7 @@
 ! Xresources file
+!
+! window size
+URxvt.geometry: 140x50
 
 ! transparency
 !URxvt.transparent:      true
