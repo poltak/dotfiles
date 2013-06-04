@@ -34,8 +34,9 @@ hi ColorColumn ctermbg=yellow guibg=yellow
 
 colorscheme desert
 
-" Make vim-taglist go on the rightside of the window
-let Tlist_Use_Right_Window  = 1
+" Tlist couldn't find ctags in PATH after Arch moved everything to /usr/bin
+let Tlist_Use_Right_Window = 1
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
 " Useful key mappings
 nmap <C-e> :e#<CR>
