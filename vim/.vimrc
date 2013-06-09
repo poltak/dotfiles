@@ -32,7 +32,10 @@ set encoding=utf-8
 set cc=120
 hi ColorColumn ctermbg=yellow guibg=yellow
 
-colorscheme desert
+"colorscheme desert
+colorscheme molokai
+"set background=dark
+let g:rehash256 = 1
 
 " Tlist couldn't find ctags in PATH after Arch moved everything to /usr/bin
 let Tlist_Use_Right_Window = 1
@@ -49,9 +52,10 @@ nmap \k :set cc=120<CR>
 
 " gvim stuff
 if has('gui_running')
-    set guifont=ProFont\ 10
+    set guifont=ProFont\ 8
+    "set guifont=Source\ Code\ Pro\ Regular\ 9
     set lines=65 columns=105
-    "set guioptions-=m  "remove menu bar
+    set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
 
