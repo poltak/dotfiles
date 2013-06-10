@@ -32,9 +32,7 @@ set encoding=utf-8
 set cc=120
 hi ColorColumn ctermbg=yellow guibg=yellow
 
-"colorscheme desert
 colorscheme molokai
-"set background=dark
 let g:rehash256 = 1
 
 " Tlist couldn't find ctags in PATH after Arch moved everything to /usr/bin
@@ -53,11 +51,11 @@ nmap \k :set cc=120<CR>
 " gvim stuff
 if has('gui_running')
     set guifont=ProFont\ 8
-    "set guifont=Source\ Code\ Pro\ Regular\ 9
     set lines=65 columns=105
-    set guioptions-=m  "remove menu bar
-    set guioptions-=T  "remove toolbar
-    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=m   "remove menu bar
+    set guioptions-=T   "remove toolbar
+    set guioptions-=r   "remove right-hand scroll bar
+    set guioptions-=L   "remove left-hand scroll bar which occurs during vertical split
 
     " Toggles removal of menubar, toolbar and right-hand scrollbar in gvim
     nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
