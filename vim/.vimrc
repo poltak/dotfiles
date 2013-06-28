@@ -5,7 +5,6 @@ filetype plugin on
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType tex setlocal spell spelllang=en_gb
 retab
-colo pablo
 
 set backspace=start,indent,eol
 set expandtab
