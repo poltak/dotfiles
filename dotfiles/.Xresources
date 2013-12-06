@@ -1,7 +1,7 @@
 ! Xresources file
 !
 ! window size
-URxvt.geometry: 140x50
+URxvt.geometry: 130x40
 
 ! transparency
 !URxvt.transparent:      true
@@ -12,43 +12,60 @@ URxvt.scrollBar:        off
 
 ! font
 !URxvt.font:             -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
-URxvt.font:             xft:profont:size=8
+URxvt.font:             xft:profont:size=9
+!URxvt.font:             xft:Source Code Pro Medium:size=7
+!URxvt*font:              -*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
+!URxvt*boldFont:          -*-terminusmod-bold-r-normal-*-12-*-*-*-*-*-*-*
+
 
 ! open URLs in chrome
-URxvt.perl-ext-common:  default,matcher,vtwheel
-URxvt.urlLauncher:      /usr/bin/chromium
-URxvt.matcher.button:   1
+!URxvt.perl-ext-common:  default,matcher
+!URxvt.urlLauncher:      /usr/bin/firefox
+!URxvt.matcher.button:   1
+URxvt.perl-ext:         default,url-select
+URxvt.keysym.C-i:       perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
 
-! make URLs funny colours
-URxvt.colorUL: #4682B4
 
 ! set 256 colors term
 URxvt*termName:         screen-256color
 
-! colours
-URxvt.color0:           #000000
-URxvt.color1:           #A80000
-URxvt.color2:           #00A800
-URxvt.color3:           #A8A800
-URxvt.color4:           #0000A8
-URxvt.color5:           #A800A8
-URxvt.color6:           #00A8A8
-URxvt.color7:           #A8A8A8
+URxvt*intensityStyles:  true
 
-URxvt.color8:           #0073E6
-URxvt.color9:           #FF0054
-URxvt.color10:          #00FF54
-URxvt.color11:          #FFFF54
-URxvt.color12:          #9ECFFF
-URxvt.color13:          #FF00FF
-URxvt.color14:          #00FFFF
-URxvt.color15:          #FFFFFF
+URxvt*background:           #2B2B2B
+URxvt*foreground:           #A1A1A1
 
-URxvt.cursorColor:      #E0E2E4
-URxvt.pointerColor:     #E0E2E4
-URxvt.foreground:       #E0E2E4
-URxvt.background:       #293134
-!URxvt.cursorColor:      #00A800
-!URxvt.pointerColor:     #00A800
-!URxvt.background:       #000000
-!URxvt.foreground:       #00A800
+URxvt*highlightColor:       #999999
+URxvt*highlightTextColor:   #FFFFFF
+URxvt*cursorColor:          #999999
+URxvt*colorBD:              #FFFFFF
+URxvt*colorUL:              #FFFFCC
+URxvt*underlineColor:       #6666CC
+URxvt*internalBorder:       3
+
+
+!BLACK
+URxvt*color0:               #4b4b4b
+URxvt*color8:               #656565
+!RED
+URxvt*color1:               #d6729b
+URxvt*color9:               #ffa6c8
+!GREEN
+URxvt*color2:               #98d16f
+URxvt*color10:              #c6fca4
+!YELLOW
+URxvt*color3:               #d6ac72
+URxvt*color11:              #ffdda6
+!BLUE
+URxvt*color4:               #729bd6
+URxvt*color12:              #a6c8ff
+!MAGENTA
+URxvt*color5:               #ac72d6
+URxvt*color13:              #dba4fc
+!CYAN
+URxvt*color6:               #6fd1a8
+URxvt*color14:              #a6ffdd
+!WHITE
+URxvt*color7:               #d1d1d1
+URxvt*color15:              #ffffff
