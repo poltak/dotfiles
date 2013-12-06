@@ -1,5 +1,5 @@
 emulate sh -c 'source /etc/profile'
 export PAGER=/usr/bin/less
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/gvim
-export BROWSER=/usr/bin/chromium
+export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/mvim
+export BROWSER=/Applications/Safari.app/Contents/MacOS/Safari
