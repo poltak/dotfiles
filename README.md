@@ -1,6 +1,8 @@
-### dotfiles/
-Common user app configs + i3wm/i3status configs (less updated now that
-my main machine is a Macbook).
+### .
+Misc user app configs.
+
+### i3wm/
+i3wm/i3status configs (less updated now that my main machine is an OS X powered Macbook).
 
 ### vim/
 .vimrc and plugins.<br />
