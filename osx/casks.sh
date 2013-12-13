@@ -26,3 +26,4 @@ installcask filezilla
 installcask nosleep
 installcask android-file-transfer
 installcask appcleaner
+installcask alfred
