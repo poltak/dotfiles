@@ -10,20 +10,22 @@ function installcask() {
 	brew cask install "${@}" 2> /dev/null
 }
 
+installcask alfred
+installcask android-file-transfer
+installcask appcleaner
+installcask caffeine
+installcask disk-inventory-x
 installcask dropbox
+installcask filezilla
 installcask firefox
+installcask flux
 installcask google-chrome
 installcask iterm2
 installcask macvim
+installcask mou
+installcask monolingual
+installcask nosleep
+installcask skype
 installcask sublime-text
 installcask the-unarchiver
 installcask vlc
-installcask flux
-installcask skype
-installcask monolingual
-installcask disk-inventory-x
-installcask filezilla
-installcask nosleep
-installcask android-file-transfer
-installcask appcleaner
-installcask alfred

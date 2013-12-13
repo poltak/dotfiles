@@ -32,7 +32,6 @@ install cmus
 install fortune
 install aspell
 install md5sha1sum
-install macvim
 install rtorrent
 install sshfs
 install weechat
