@@ -21,7 +21,7 @@ installcask firefox
 installcask flux
 installcask google-chrome
 installcask iterm2
-installcask macvim
+installcask middleclick
 installcask mou
 installcask monolingual
 installcask nosleep

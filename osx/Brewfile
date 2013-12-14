@@ -21,19 +21,24 @@ install wget --enable-iri
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
 tap homebrew/dupes
+install homebrew/dupes/awk
 install homebrew/dupes/grep
+install homebrew/dupes/less
+install homebrew/dupes/make
+install homebrew/dupes/ncurses
+install homebrew/dupes/rsync
 
 # Install other useful binaries and commonly used apps
-install ack
-install git
-install rename
-install tmux
+install aspell
 install cmus
 install fortune
-install aspell
+install git
+install macvim
 install md5sha1sum
+install rename
 install rtorrent
 install sshfs
+install tmux
 install weechat
 
 # Remove outdated versions from the cellar
