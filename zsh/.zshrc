@@ -44,9 +44,6 @@ plugins=(git vi-mode colorize)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=$PATH:/bin:/usr/sbin:/sbin:/usr/bin
-
 # Source zsh-syntax-highlighting stuff
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
