@@ -453,11 +453,18 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 #cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 ###############################################################################
+# homebrew                                                                    #
+###############################################################################
+
+# Install homebrew
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" \
-	"Messages" "Safari" "SystemUIServer" "Terminal" "Transmission" \
+	"Messages" "Safari" "SystemUIServer" "Transmission" \
 	"iCal"; do
 	killall "${app}" > /dev/null 2>&1
 done
