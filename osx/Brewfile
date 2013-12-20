@@ -20,7 +20,7 @@ install wget --enable-iri
 
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
-tap homebrew/dupes
+#tap homebrew/dupes
 install homebrew/dupes/awk
 install homebrew/dupes/grep
 install homebrew/dupes/less
@@ -40,6 +40,31 @@ install rtorrent
 install sshfs
 install tmux
 install weechat
+
+# Install cask for native apps
+tap phinze/homebrew-cask
+install brew-cask
+cask install alfred
+cask install android-file-transfer
+cask install appcleaner
+cask install caffeine
+cask install disk-inventory-x
+cask install dropbox
+cask install filezilla
+cask install firefox
+cask install f-lux
+cask install google-chrome
+cask install intellij-idea-community
+cask install iterm2
+cask install middleclick
+cask install mou
+cask install monolingual
+cask install nosleep
+cask install skype
+cask install speedcrunch
+cask install sublime-text
+cask install the-unarchiver
+cask install vlc
 
 # Remove outdated versions from the cellar
 cleanup
