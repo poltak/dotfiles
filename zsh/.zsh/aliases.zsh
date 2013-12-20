@@ -6,8 +6,7 @@ alias hardin='ssh hardin'
 alias pingoo='ping www.google.com'
 alias ...='../..'
 alias ....='../../..'
-alias update='/usr/local/bin/brew -v update && /usr/local/bin/brew upgrade'
-alias brew='brew -v'
+alias update='brew -v update && brew upgrade'
 
 # Mac OS X application aliases for use in shell.
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
