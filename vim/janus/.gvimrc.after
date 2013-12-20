@@ -1,0 +1,8 @@
+color molokai
+set guifont=Monaco
+set lines=65 columns=105
+set guioptions-=m
+set guioptions-=r
+set guioptions-=T
+set guioptions-=L
+set cc=80

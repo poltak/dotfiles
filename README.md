@@ -12,6 +12,8 @@ repo (more specific sources can be found commented in the actual files).
 ### vim/
 .vimrc and plugins.<br />
 __Note:__ These are no longer being updated since having discovered [Janus] (https://github.com/carlhuda/janus).
+The janus/ subdirectory contains my .vimrc.after and .gvimrc.after
+dotfiles.
 
 ### zsh/
 Z shell configs.<br />

@@ -1,0 +1,4 @@
+color molokai
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
+set cc=80
