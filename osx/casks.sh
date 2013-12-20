@@ -20,12 +20,14 @@ installcask filezilla
 installcask firefox
 installcask flux
 installcask google-chrome
+installcask intellij-idea-community
 installcask iterm2
 installcask middleclick
 installcask mou
 installcask monolingual
 installcask nosleep
 installcask skype
+installcask speedcrunch
 installcask sublime-text
 installcask the-unarchiver
 installcask vlc
