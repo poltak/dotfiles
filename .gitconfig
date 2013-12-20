@@ -1,0 +1,11 @@
+[user]
+	name = Jonathan Poltak Samosir
+	email = jonathan.samosir@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[credential]
+	helper = osxkeychain
