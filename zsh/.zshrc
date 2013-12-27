@@ -37,14 +37,26 @@ plugins=(vi-mode brew osx)
 
 source $ZSH/oh-my-zsh.sh
 
+# TODO: clone zsh-syn into oh-my-zsh plugins dir
 # Source zsh-syntax-highlighting stuff
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Path to personal zsh configs.
-ZSH_DOTFILES=$HOME/.zsh
+ZSH_CONFIGS=$HOME/.zsh
 
-# TODO: make this more robust
+# Small function to check if specified config.zsh file is valid config.
+# NOTE: based off oh-my-zsh's is_plugin() function.
+is_config() {
+  local base_dir=$1
+  local name=$2
+  test -f $base_dir/$name.conf.zsh
+}
+
 # Source all configs.
-for dotfile in $(ls $ZSH_DOTFILES/*.zsh); do
-	source $dotfile
+for config ($ZSH_CONFIGS); do
+  if is_config $ZSH_CONFIGS $config; then
+    soure $ZSH_CONFIGS/$config.config.zsh
+  else
+    echo "Invalid zsh config found in config directory: $config" &>2
+  fi
 done
