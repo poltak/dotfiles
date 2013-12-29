@@ -23,7 +23,7 @@ export UPDATE_ZSH_DAYS=7
 DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+#COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -33,18 +33,18 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode brew osx)
+plugins=(vi-mode brew osx git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# Source zsh-syntax-highlighting stuff
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Path to personal zsh configs.
-ZSH_DOTFILES=$HOME/.zsh
+ZSH_CONFIGS=$HOME/.zsh
 
-# TODO: make this more robust
 # Source all configs.
-for dotfile in $(ls $ZSH_DOTFILES/*.zsh); do
-	source $dotfile
+for config in $ZSH_CONFIGS/*.config.zsh; do
+  if [[ -f $config ]]; then
+    source $config
+  else
+    echo "Invalid zsh config found in config directory: $config" 1>&2
+  fi
 done
