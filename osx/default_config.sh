@@ -42,6 +42,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
+# Make Mission Control animations instant
+defaults write com.apple.dock expose-animation-duration -float 0
+
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
