@@ -20,3 +20,6 @@ Z shell configs.<br />
 __Note:__ I use [oh-my-zsh] (https://github.com/robbyrussell/oh-my-zsh)
 for managing most Z shell configurations. Hence .zshrc depends on
 oh-my-zsh to work as intended.
+
+### sublimetext/
+Sublime Text 2 user and default configs.
