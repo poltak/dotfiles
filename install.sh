@@ -80,3 +80,8 @@ fi
 # Install sublime text 2 default config.
 ln -s "${PWD}/sublimetext/Preferences.sublime-settings.default" \
   "${SUB_TEXT_DIR}/Packages/Default/Preferences.sublime-settings"
+
+# # #
+
+# Instruct user to install intellij config manually.
+echo "Please manually install intellij.jar settings manually."
