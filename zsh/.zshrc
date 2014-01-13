@@ -30,21 +30,7 @@ DISABLE_CORRECTION="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode brew brew-cask osx zsh-syntax-highlighting)
+# Which plugins would you like to load?
+plugins=(vi-mode brew osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
-# Path to personal zsh configs.
-ZSH_CONFIGS=$HOME/.zsh
-
-# Source all configs.
-for config in $ZSH_CONFIGS/*.config.zsh; do
-  if [[ -f $config ]]; then
-    source $config
-  else
-    echo "Invalid zsh config found in config directory: $config" 1>&2
-  fi
-done

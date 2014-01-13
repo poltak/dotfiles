@@ -49,8 +49,8 @@ fi
 # # #
 
 # Install Z shell dotfiles.
-ln -s ${PWD}/zsh/.{zsh,zshrc,zprofile} ~/
-ln -s ${PWD}/zsh/poltak.zsh-theme ~/.oh-my-zsh/themes/
+ln -s ${PWD}/zsh/.{zshrc,zprofile} ~/
+#ln -s ${PWD}/zsh/poltak.zsh-theme ~/.oh-my-zsh/themes/
 
 # # #
 
