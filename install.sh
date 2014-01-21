@@ -25,31 +25,41 @@ esac
 # Install non-OS X specific dotfiles on non-OS X systems.
 if [[ "$(uname)" != "Darwin" ]]; then
   # Install misc dotfiles.
-  ln -s ${PWD}/.{Xresources,xbindkeysrc} ~/
+  ln -s ${PWD}/Xresources ~/.Xresources
+  ln -s ${PWD}/xbindkeysrc ~/.xbindkeysrc
+
   # Install i3wm related configs.
-  ln -s ${PWD}/i3wm/.{i3,i3status.conf} ~/
+  ln -s ${PWD}/i3wm/i3 ~/.i3
+  ln -s ${PWD}/i3wm/i3status ~/.i3status.conf
 fi
 
 # # #
 
 # Install misc dotfiles.
-ln -s ${PWD}/.{gitconfig,rtorrent.rc,screenrc,tmux.conf} ~/
+ln -s ${PWD}/gitconfig ~/.gitconfig
+ln -s ${PWD}/rtorrent.rc ~/.rtorrent.rc
+ln -s ${PWD}/screenrc ~/.screenrc
+ln -s ${PWD}/tmux.conf ~/.tmux.conf
 
 # # #
 
 # Install vim dotfiles.
 if [[ -z $janus ]]; then
   # If janus flag is not specified.
-  ln -s ${PWD}/vim/.{vim,vimrc} ~/
+  ln -s ${PWD}/vim/vim_configs ~/.vim
+  ln -s ${PWD}/vim/vimrc ~/.vimrc
 else
   # If janus flag is specified.
-  ln -s ${PWD}/vim/janus/.{gvimrc.after,vimrc.after} ~/
+  ln -s ${PWD}/vim/janus/gvimrc.after ~/.gvimrc.after
+  ln -s ${PWD}/vimrc.after ~/.vimrc.after
 fi
 
 # # #
 
 # Install Z shell dotfiles.
-ln -s ${PWD}/zsh/.{zshrc,zprofile} ~/
+ln -s ${PWD}/zsh/zshrc ~/.zshrc
+ln -s ${PWD}/zsh/zprofile ~/.zprofile
+ln -s ${PWD}/zsh/zsh_configs ~/.zsh
 #ln -s ${PWD}/zsh/poltak.zsh-theme ~/.oh-my-zsh/themes/
 
 # # #
@@ -83,5 +93,6 @@ ln -s "${PWD}/sublimetext/Preferences.sublime-settings.default" \
 
 # # #
 
-# Instruct user to install intellij config manually.
-echo "Please manually install intellij.jar settings manually."
+# Instruct user to install difficult configs manually.
+echo "Please manually install intellij.jar and bettertouchtool.conf (if OS X) \
+  settings manually."
