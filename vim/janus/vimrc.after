@@ -2,3 +2,5 @@ color molokai
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 set cc=80
+nnoremap <silent> <F11> :YRShow<CR>
+let g:yankring_history_file = '.yankring_hist'
