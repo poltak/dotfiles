@@ -2,7 +2,7 @@
 	name = Jonathan Poltak Samosir
 	email = jonathan.samosir@gmail.com
 [push]
-	default = simple
+	default = tracking
 [core]
 	editor = vim
 [merge]
