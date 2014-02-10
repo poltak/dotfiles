@@ -1,9 +1,8 @@
+" Set theme to molokai (sublime text 2 theme)
 color molokai
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
+
+" Set column marker at 80 chars
 set cc=80
+
+" Map F11 to yankring
 nnoremap <silent> <F11> :YRShow<CR>
-"let g:yankring_history_dir = '~/.vim/'
-"let g:yankring_history_file = 'yankring_hist'
-" Y yanks to the end of the line
-"nnoremap Y   :<C-U>YRYankCount 'y$'<CR>

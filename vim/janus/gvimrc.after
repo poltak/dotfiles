@@ -1,8 +1,11 @@
-color molokai
+" Set vim GUI font and font size
 set guifont=Menlo:h14
+
+" Set initial size of vim GUI window
 set lines=65 columns=105
+
+" Remove menubar and toolbars from vim GUI
 set guioptions-=m
 set guioptions-=r
 set guioptions-=T
 set guioptions-=L
-set cc=80
