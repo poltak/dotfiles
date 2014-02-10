@@ -3,4 +3,7 @@ nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 set cc=80
 nnoremap <silent> <F11> :YRShow<CR>
-let g:yankring_history_file = '.yankring_hist'
+"let g:yankring_history_dir = '~/.vim/'
+"let g:yankring_history_file = 'yankring_hist'
+" Y yanks to the end of the line
+"nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
