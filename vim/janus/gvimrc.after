@@ -1,5 +1,5 @@
 color molokai
-set guifont=Monaco:h14
+set guifont=Menlo:h14
 set lines=65 columns=105
 set guioptions-=m
 set guioptions-=r
