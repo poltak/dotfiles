@@ -31,6 +31,6 @@ DISABLE_CORRECTION="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load?
-plugins=(vi-mode brew osx zsh-syntax-highlighting)
+plugins=(vi-mode brew brew-cask osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
