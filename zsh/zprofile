@@ -4,3 +4,4 @@ export EDITOR=/usr/local/bin/vim
 export VISUAL=/usr/local/bin/mvim
 export BROWSER=/Applications/Safari.app/Contents/MacOS/Safari
 export JAVA_HOME=$(/usr/libexec/java_home)
+export ANDROID_HOME=/usr/local/opt/android-sdk
