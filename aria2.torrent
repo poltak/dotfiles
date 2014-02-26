@@ -4,3 +4,4 @@ max-overall-download-limit=900K
 bt-require-crypto=true
 bt-min-crypto-level=arc4
 listen-port=51413
+enable-dht
