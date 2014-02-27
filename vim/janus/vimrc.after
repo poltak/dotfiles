@@ -6,3 +6,12 @@ set cc=80
 
 " Map F11 to yankring
 nnoremap <silent> <F11> :YRShow<CR>
+
+" Open NERDTree if no file opened on start
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" Open taglist on vim initialisation
+autocmd vimenter * Tagbar
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1

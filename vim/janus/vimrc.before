@@ -1,0 +1,17 @@
+" Move yankring history file out of $HOME
+let g:yankring_history_dir = '~/.vim/'
+let g:yankring_history_file = 'yankring_hist'
+" Y yanks to the end of the line
+nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
+
+" Disable certain janus plugins that I do not use
+call janus#disable_plugin('ack')
+call janus#disable_plugin('easymotion')
+call janus#disable_plugin('nrrwrgn')
+call janus#disable_plugin('fugitive')
+call janus#disable_plugin('vroom')
+call janus#disable_plugin('vim-multiple-cursors')
+
+" Remap NERDTree and TagBar toggles
+map <C-q> :NERDTreeToggle<CR>
+map <C-e> :TagbarToggle<CR>
