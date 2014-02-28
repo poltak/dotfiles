@@ -1,5 +1,9 @@
 " Set theme to molokai (sublime text 2 theme)
-color molokai
+"color molokai
+
+" Set colorscheme to solarized dark
+set background=dark
+colorscheme solarized
 
 " Set column marker at 80 chars
 set cc=80
