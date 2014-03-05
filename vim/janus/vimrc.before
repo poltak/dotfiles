@@ -1,6 +1,7 @@
 " Move yankring history file out of $HOME
 let g:yankring_history_dir = '~/.vim/'
 let g:yankring_history_file = 'yankring_hist'
+
 " Y yanks to the end of the line
 nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
 
@@ -12,6 +13,23 @@ call janus#disable_plugin('fugitive')
 call janus#disable_plugin('vroom')
 call janus#disable_plugin('vim-multiple-cursors')
 
-" Remap NERDTree and TagBar toggles
+" Map NERDTree and TagBar toggles
 map <C-q> :NERDTreeToggle<CR>
 map <C-e> :TagbarToggle<CR>
+
+" Default colorcolumn value
+set cc=81
+
+" Dumb toggle function for colorcolumn toggle between col 81 and 101
+let s:cc_val = 81
+function! s:ToggleCC()
+  if s:cc_val == 81
+    set cc=121
+    let s:cc_val = 121
+  else
+    set cc=81
+    let s:cc_val = 81
+  endif
+endfunction
+
+nnoremap <Leader>8 :call <SID>ToggleCC()<cr>

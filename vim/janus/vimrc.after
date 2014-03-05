@@ -6,7 +6,7 @@ set background=dark
 colorscheme solarized
 
 " Set column marker at 80 chars
-set cc=80
+"set cc=80
 
 " Map F11 to yankring
 nnoremap <silent> <F11> :YRShow<CR>
