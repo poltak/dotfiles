@@ -5,3 +5,4 @@ export VISUAL=/usr/local/bin/mvim
 export BROWSER=/Applications/Safari.app/Contents/MacOS/Safari
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/usr/local/opt/android-sdk
+export DOCKER_HOST=tcp://localhost:4243
