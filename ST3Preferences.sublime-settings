@@ -1,5 +1,5 @@
 {
-	"always_show_minimap_viewport": true,
+	"always_show_minimap_viewport": false,
 	"auto_complete_delay": 50,
 	"caret_style": "smooth",
 	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
@@ -7,6 +7,7 @@
 	"font_size": 12,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
+	"ignored_packages":[],
 	"rulers":
 	[
 		120
