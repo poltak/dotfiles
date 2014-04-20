@@ -5,9 +5,16 @@
 	default = tracking
 [core]
 	editor = vim
+	excludesfile = /Users/poltak/.gitignore_global
 [merge]
 	tool = vimdiff
 [credential]
 	helper = osxkeychain
 [color]
 	ui = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
