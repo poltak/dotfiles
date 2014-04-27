@@ -11,7 +11,6 @@ call janus#disable_plugin('easymotion')
 call janus#disable_plugin('nrrwrgn')
 call janus#disable_plugin('fugitive')
 call janus#disable_plugin('vroom')
-call janus#disable_plugin('vim-multiple-cursors')
 
 " Map NERDTree and TagBar toggles
 map <C-q> :NERDTreeToggle<CR>
