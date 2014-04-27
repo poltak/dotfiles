@@ -1,11 +1,15 @@
 " Set vim GUI font and font size
-set guifont=Menlo:h14
+set guifont=Menlo:h12
 
 " Set initial size of vim GUI window
-set lines=65 columns=105
+set lines=65 columns=125
 
 " Remove menubar and toolbars from vim GUI
 set guioptions-=m
 set guioptions-=r
 set guioptions-=T
 set guioptions-=L
+
+" Set solarized-light colour theme
+set background=light
+colorscheme solarized
