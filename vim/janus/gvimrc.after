@@ -6,9 +6,7 @@ set lines=65 columns=125
 
 " Remove menubar and toolbars from vim GUI
 set guioptions-=m
-set guioptions-=r
 set guioptions-=T
-set guioptions-=L
 
 " Set solarized-light colour theme
 set background=light
