@@ -1,0 +1,39 @@
+"1.1
+
+loadplugins '\.(js|penta)$'
+group user
+set guioptions=bCNs
+
+" Set hints to be in the home row
+set hintkeys=asdfglkjh
+
+" Able to separate urls by a comma
+set urlseparator=,
+
+" Change font size for hints and console font
+hi FontFixed -append font-size: 10pt !important;
+hi Hint -append font-size: 12pt !important;
+" some groups -- such as `CmdLine` and `StatusLine` -- are linked by default
+hi -append -link FontFixed Hint
+hi -append -link FontFixed CompItem
+hi -append -link FontFixed CompTitle
+
+" Disable smooth scrolling
+set scrollsteps=1
+set scrolltime=0
+
+" Find in page options
+set incfind
+set hlfind
+set findcase=smart
+
+" Colorscheme
+colorscheme solarized-dark
+
+" Faster scrolling
+map -b j 8j
+map -b k 8k
+map -b h 8h
+map -b l 8l
+
+" vim: set ft=pentadactyl:
