@@ -1,63 +1,79 @@
-execute pathogen#infect()
-syntax on
-filetype plugin on
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-autocmd BufWritePre * :%s/\s\+$//e
-autocmd FileType tex setlocal spell spelllang=en_gb
-retab
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-set backspace=start,indent,eol
-set expandtab
-set hls is
-set tabstop=4
-set nu
-set autoindent
-set shiftwidth=4
-set showmatch
-set wrapscan
-set background=dark
-set backupdir=~/.vim/backup
-set incsearch
-set ignorecase
-set smartcase
-set hlsearch
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" Powerline recommended settings
-set nocompatible
-set laststatus=2
-set encoding=utf-8
+" My plugins!
+Plugin 'ddollar/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/ZoomWin'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'bling/vim-airline'
+Plugin 'SirVer/ultisnips'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'mhinz/vim-signify'
+Plugin 'vim-scripts/a.vim'
+Plugin 'tomasr/molokai'
+Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Plugin 'majutsushi/tagbar'
 
-" Beautiful line marker
-set cc=120
-hi ColorColumn ctermbg=yellow guibg=yellow
+call vundle#end()            " required
+filetype plugin indent on    " required
 
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-a>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" Set ST3 colorscheme
 colorscheme molokai
-let g:rehash256 = 1
 
-" Tlist couldn't find ctags in PATH after Arch moved everything to /usr/bin
-let Tlist_Use_Right_Window = 1
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+" Line marker
+set cc=120
 
-" Useful key mappings
-nmap <C-e> :e#<CR>
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
-nmap \e :NERDTreeToggle<CR>
-nmap \t :TlistToggle<CR>
-nmap \l :set cc=0<CR>
-nmap \k :set cc=120<CR>
+" Line numbers
+set number
 
-" gvim stuff
-if has('gui_running')
-    set guifont=ProFont\ 8
-    set lines=65 columns=105
-    set guioptions-=m   "remove menu bar
-    set guioptions-=T   "remove toolbar
-    set guioptions-=r   "remove right-hand scroll bar
-    set guioptions-=L   "remove left-hand scroll bar which occurs during vertical split
+" GUI font
+set guifont=Menlo\ Regular:h12
 
-    " Toggles removal of menubar, toolbar and right-hand scrollbar in gvim
-    nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
-    nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
-    nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
-endif
+" Set tabs to 2 spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Required for Latex-Suite
+filetype plugin on
+set grepprg=grep\ -nH\ $*
+filetype indent on
+let g:tex_flavor='latex'
+
+" Show airline all the time
+set laststatus=2
+
+" Show other buffers when in single tab mode
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+""" KEY MAPPINGS
+nmap \q :NERDTreeToggle<CR>
+nmap \e :TagbarToggle<CR>
+" Go to next or prev file
+nmap \n :bnext<CR>
+nmap \p :bprev<CR>
+

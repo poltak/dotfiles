@@ -2,6 +2,10 @@
 let g:yankring_history_dir = '~/.vim/'
 let g:yankring_history_file = 'yankring_hist'
 
+" Probably already done by janus, but oh well
+syntax on
+filetype plugin indent on
+
 " Y yanks to the end of the line
 nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
 
