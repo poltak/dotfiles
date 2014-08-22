@@ -38,6 +38,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Fix backspace oddity
+set backspace=2
+
 
 
 """ KEY MAPPINGS
