@@ -3,96 +3,85 @@
 # appropriate directories.
 
 usage() {
-  echo "usage: install.sh [--janus]" >&2
+  echo "usage: install.sh [--deprecated]" >&2
   exit 1
 }
 
-# Deal with possible flags.
+# Deal with possible flags
 case $# in
   0)
     ;;
   1)
-    [[ "$1" != "--janus" ]] && usage
-    janus=1
+    [[ "$1" != "--deprecated" ]] && usage
+    deprecated=1
     ;;
   *)
     usage
     ;;
 esac
 
+
 # # #
 
-# Install non-OS X specific dotfiles on non-OS X systems.
+
+# Because OS X is specia.
 if [[ "$(uname)" != "Darwin" ]]; then
-  # Install misc dotfiles.
-  ln -s ${PWD}/Xresources ~/.Xresources
-  ln -s ${PWD}/xbindkeysrc ~/.xbindkeysrc
-
-  # Install i3wm related configs.
-  ln -s ${PWD}/i3wm/i3 ~/.i3
-  ln -s ${PWD}/i3wm/i3status ~/.i3status.conf
-fi
-
-# # #
-
-# Install misc dotfiles.
-ln -s ${PWD}/gitconfig ~/.gitconfig
-ln -s ${PWD}/rtorrent.rc ~/.rtorrent.rc
-ln -s ${PWD}/screenrc ~/.screenrc
-ln -s ${PWD}/tmux.conf ~/.tmux.conf
-
-# # #
-
-# Install vim dotfiles.
-if [[ -z $janus ]]; then
-  # If janus flag is not specified.
-  ln -s ${PWD}/vim/vim_configs ~/.vim
-  ln -s ${PWD}/vim/vimrc ~/.vimrc
+  SUB_TEXT_DIR="${HOME}/.config/sublime-text-3"
 else
-  # If janus flag is specified.
-  ln -s ${PWD}/vim/janus/gvimrc.after ~/.gvimrc.after
-  ln -s ${PWD}/vimrc.after ~/.vimrc.after
+  SUB_TEXT_DIR="${HOME}/Library/Application Support/Sublime Text 3"
 fi
 
-# # #
-
-# Install Z shell dotfiles.
-ln -s ${PWD}/zsh/zshrc ~/.zshrc
-ln -s ${PWD}/zsh/zprofile ~/.zprofile
-ln -s ${PWD}/zsh/zsh_configs ~/.zsh
-#ln -s ${PWD}/zsh/poltak.zsh-theme ~/.oh-my-zsh/themes/
-
-# # #
-
-# Because OS X is special.
-if [[ "$(uname)" != "Darwin" ]]; then
-  SUB_TEXT_DIR="${HOME}/.config/sublime-text-2"
-else
-  SUB_TEXT_DIR="${HOME}/Library/Application Support/Sublime Text 2"
-fi
-
-# Check and backup original user config.
+# Check and backup original user config
 if [[ -f "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings" ]]; then
   mv "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings" \
     "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings.orig"
 fi
 
-# Install sublime text 2 user config.
-ln -s "${PWD}/sublimetext/Preferences.sublime-settings.user" \
+# Install ST3 config
+ln -s "${PWD}/ST3Preferences.sublime-settings" \
   "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings"
 
-# Check and backup original default config.
-if [[ -f "${SUB_TEXT_DIR}/Packages/Default/Preferences.sublime-settings" ]]; then
-  mv "${SUB_TEXT_DIR}/Packages/Default/Preferences.sublime-settings" \
-    "${SUB_TEXT_DIR}/Packages/Default/Preferences.sublime-settings.orig"
-fi
+# Install vim config
+ln -s ${PWD}/vimrc ~/.vimrc
 
-# Install sublime text 2 default config.
-ln -s "${PWD}/sublimetext/Preferences.sublime-settings.default" \
-  "${SUB_TEXT_DIR}/Packages/Default/Preferences.sublime-settings"
+# Install Z shell configs
+ln -s ${PWD}/zshrc ~/.zshrc
+ln -s ${PWD}/zprofile ~/.zprofile
+
+# Install misc dotfiles
+ln -s ${PWD}/gitconfig ~/.gitconfig
+ln -s ${PWD}/tmux.conf ~/.tmux.conf
+
 
 # # #
 
-# Instruct user to install difficult configs manually.
-echo "Please manually install intellij.jar and bettertouchtool.conf (if OS X) \
-  settings manually."
+
+# Install deprecated files if requested
+if [[ -n $deprecated ]]; then
+  DIR=${PWD}/deprecated
+
+  # Install X11 app configs 
+  ln -s ${DIR}/Xresources ~/.Xresources
+  ln -s ${DIR}/xbindkeysrc ~/.xbindkeysrc
+
+  # Install i3wm related configs
+  ln -s ${DIR}/i3wm/i3 ~/.i3
+  ln -s ${DIR}/i3wm/i3status ~/.i3status.conf
+
+  # Install aria2 configs
+  ln -s ${DIR}/aria2.conf ~/.aria2.conf
+  ln -s ${DIR}/aria2.torrent ~/.aria2.torrent
+
+
+  # Install misc dotfiles
+  ln -s ${PWD}/rtorrent.rc ~/.rtorrent.rc
+  ln -s ${PWD}/screenrc ~/.screenrc
+  ln -s ${PWD}/pentadactylrc ~/.pentadactylrc
+fi
+
+
+# # #
+
+
+# Instruct user to install difficult configs manually
+echo "Please manually install intellij.jar, bettertouchtool.conf (if OS X), and oh-my-zsh configs"
