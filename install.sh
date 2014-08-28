@@ -24,7 +24,7 @@ esac
 # # #
 
 
-# Because OS X is specia.
+# Because OS X is special
 if [[ "$(uname)" != "Darwin" ]]; then
   SUB_TEXT_DIR="${HOME}/.config/sublime-text-3"
 else
@@ -36,10 +36,17 @@ if [[ -f "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings" ]]; then
   mv "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings" \
     "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings.orig"
 fi
+# Do same thing for keymap
+if [[ if ]]; then
+  mv "${SUB_TEXT_DIR}/Packages/User/Default (OSX).sublime-keymap" \
+    "${SUB_TEXT_DIR}/Packages/User/Default (OSX).sublime-keymap.orig"
+fi
 
-# Install ST3 config
+# Install ST3 config and keymap
 ln -s "${PWD}/ST3Preferences.sublime-settings" \
   "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings"
+ln -s "${PWD}/ST3Keymap.sublime-keymap" \
+  "${SUB_TEXT_DIR}/Packages/User/Default (OSX).sublime-keymap"
 
 # Install vim config
 ln -s ${PWD}/vimrc ~/.vimrc
