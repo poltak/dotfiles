@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+@misc{web:${1:name},
+  title = {${2:title}},
+  year = {${3:year}},
+  month = {${4:month}},
+  howpublished = {\mbox{\url{${5:url}}}}
+}
+]]></content>
+  <tabTrigger>web</tabTrigger>
+  <scope>text.bibtex</scope>
+</snippet>
