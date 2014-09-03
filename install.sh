@@ -37,16 +37,23 @@ if [[ -f "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings" ]]; then
     "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings.orig"
 fi
 # Do same thing for keymap
-if [[ if ]]; then
+if [[ -f "${SUB_TEXT_DIR}/Packages/User/Default (OSX).sublime-keymap" ]]; then
   mv "${SUB_TEXT_DIR}/Packages/User/Default (OSX).sublime-keymap" \
     "${SUB_TEXT_DIR}/Packages/User/Default (OSX).sublime-keymap.orig"
 fi
 
 # Install ST3 config and keymap
-ln -s "${PWD}/ST3Preferences.sublime-settings" \
+ln -s "${PWD}/sublime-text-3/ST3Preferences.sublime-settings" \
   "${SUB_TEXT_DIR}/Packages/User/Preferences.sublime-settings"
-ln -s "${PWD}/ST3Keymap.sublime-keymap" \
+ln -s "${PWD}/sublime-text-3/ST3Keymap.sublime-keymap" \
   "${SUB_TEXT_DIR}/Packages/User/Default (OSX).sublime-keymap"
+
+# Install all ST3 snippets
+for snippet in $( ls "${PWD}/sublime-text-3/snippets/" ); do
+  ln -s "${PWD}/sublime-text-3/snippets/${snippet}" \
+    "${SUB_TEXT_DIR}/Packages/User/${snippet}"
+done
+
 
 # Install vim config
 ln -s ${PWD}/vimrc ~/.vimrc
