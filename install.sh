@@ -96,6 +96,10 @@ fi
 
 # # #
 
+# Install mjolnir config
+ln -s ${PWD}/mjolnir-config.lua ${HOME}/.mjolnir/init.lua
+
+# # #
 
 # Instruct user to install difficult configs manually
 echo "Please manually install intellij.jar, bettertouchtool.conf (if OS X), and oh-my-zsh configs"
