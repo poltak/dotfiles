@@ -8,17 +8,24 @@ call vundle#begin()
 
 " My plugins
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+
 Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'closetag.vim'
 
 
 call vundle#end() 		    " required
 filetype plugin indent on	" required
+" END OF VUNDLE STUFF
+
 
 
 " Set colorscheme
-colorscheme molokai
+colorscheme sol
 
 " Line marker
 set cc=120
@@ -41,13 +48,24 @@ set expandtab
 " Fix backspace oddity
 set backspace=2
 
+" CtrlP settings- move it to top, ignore certain files
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+
+" Powerline settings- always show, disable certain extensions, powerline fonts
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#csv#enabled = 0
+let g:airline#extensions#eclim#enabled = 0
+let g:airline#extensions#virtualenv#enabled = 0
 
 
 """ KEY MAPPINGS
-" Tagbar plugin
-nmap \e :TagbarToggle<CR>
 nmap \q :NERDTreeToggle<CR>
+nmap \e :TagbarToggle<CR>
 
 " Go to next or prev file
-nmap \n :bnext<CR>
-nmap \p :bprev<CR>
+nmap <C-n> :bnext<CR>
+nmap <C-m> :bprev<CR>
