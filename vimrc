@@ -8,14 +8,12 @@ call vundle#begin()
 
 " My plugins
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'closetag.vim'
 
 
 call vundle#end() 		    " required
@@ -61,6 +59,8 @@ let g:airline#extensions#csv#enabled = 0
 let g:airline#extensions#eclim#enabled = 0
 let g:airline#extensions#virtualenv#enabled = 0
 
+" Set shell to be bash
+set shell=bash
 
 """ KEY MAPPINGS
 nmap \q :NERDTreeToggle<CR>
