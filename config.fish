@@ -15,5 +15,5 @@ set fish_theme robbyrussell
 . $fish_path/oh-my-fish.fish
 
 # My own list of plugins to load
-set fish_plugins vi-mode vundle sublime tmux update git
+set fish_plugins vi-mode vundle sublime tmux node
 
