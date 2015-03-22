@@ -60,7 +60,7 @@ let g:airline#extensions#eclim#enabled = 0
 let g:airline#extensions#virtualenv#enabled = 0
 
 " Set shell to be bash
-set shell=bash
+set shell=zsh
 
 """ KEY MAPPINGS
 nmap \q :NERDTreeToggle<CR>
