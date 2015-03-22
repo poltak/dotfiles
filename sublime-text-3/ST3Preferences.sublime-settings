@@ -2,19 +2,14 @@
 	"always_show_minimap_viewport": false,
 	"auto_complete_delay": 50,
 	"caret_style": "smooth",
-	"color_scheme": "Packages/Base16 Color Schemes/base16-solarized.dark.tmTheme",
+	"color_scheme": "Packages/User/fox.dark (SL).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
-	"font_face": "Source Code Pro",
-	"font_size": 13,
+	"font_face": "Menlo",
+	"font_size": 14,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"MacTerminal",
-		"WordHighlight",
-		"SublimeLinter",
-		"SublimeCodeIntel",
-		"Color Highlighter",
 		"Vintage"
 	],
 	"line_padding_bottom": 0,
@@ -29,7 +24,7 @@
 	"soda_folder_icons": false,
 	"spell_check": true,
 	"tab_size": 2,
-	"theme": "Gravity.sublime-theme",
+	"theme": "fox.light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
