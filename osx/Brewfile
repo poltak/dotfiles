@@ -29,42 +29,150 @@ install homebrew/dupes/ncurses
 install homebrew/dupes/rsync
 
 # Install other useful binaries and commonly used apps
+install apg
+install archey
+install asciidoc
 install aspell
-install cmus
-install fortune
+install autoconf
+install automake
+install bro
+install ccache
+install cloog
+install cmake
+install cscope
+install ctags
+install curl
+install curl-ca-bundle
+install docbook
+install dos2unix
+install faad2
+install figlet
+install flac
+install fontconfig
+install freetype
+install fuse4x-kext
+install gcc
+install gd
+install gdbm
+install geoip
+install gettext
 install git
-install macvim
+install gmp
+install gnu-sed
+install gnupg
+install gnutls
+install grep
+install hr
+install htop-osx
+install icu4c
+install isl
+install jpeg
+install keybase
+install lame
+install leiningen
+install lesstif
+install libao
+install libcue
+install libevent
+install libffi
+install libgcrypt
+install libgpg-error
+install libmpc
+install libogg
+install libpng
+install libsigc++
+install libtasn1
+install libtiff
+install libtool
+install libvorbis
+install libyaml
+install lua
+install mackup
+install mad
+install makedepend
+install markdown
 install md5sha1sum
-install rename
-install rtorrent
-install sshfs
+install mobile-shell
+install mongodb
+install mp4v2
+install mpfr
+install nettle
+install node
+install nspr
+install nss
+install openssh
+install openssl
+install p11-kit
+install p7zip
+install pcre
+install pkg-config
+install popt
+install protobuf
+install python
+install python3
+install readline
+install reattach-to-user-namespace
+install rsync
+install ruby
+install scala
+install scons
+install sip
+install sqlite
+install subversion
 install tmux
-install weechat
+install tree
+install macvim
+install wget
+install xpdf
+install xz
+install yasm
+install youtube-dl
+install zap
 
 # Install cask for native apps
 tap phinze/homebrew-cask
 install brew-cask
-cask install alfred
-cask install android-file-transfer
+cask install adobe-reader
 cask install appcleaner
-cask install caffeine
+cask install bettertouchtool
+cask install google-chrome-beta
+cask install cyberduck
+cask install dash
 cask install disk-inventory-x
 cask install dropbox
-cask install filezilla
-cask install firefox
 cask install f-lux
-cask install google-chrome
-cask install intellij-idea-community
+cask install flash
+cask install flashlight
+cask install github
+cask install google-hangouts
+cask install imageoptim
+cask install insomniax
+cask install intellij-idea-ce-bundled-jdk
 cask install iterm2
-cask install middleclick
-cask install mou
+cask install java
+cask install lastpass-universal
+cask install launchrocket
+cask install limechat
 cask install monolingual
-cask install nosleep
+cask install paintbrush
+cask install secrets
+cask install skitch
 cask install skype
+cask install steam
 cask install speedcrunch
-cask install sublime-text
+cask install spotify
+cask install spotifree
+cask install sublime-text3
+cask install teamviewer
 cask install the-unarchiver
+cask install torbrowser
+cask install transmission
+cask install unetbootin
+cask install virtualbox
 cask install vlc
+cask install ynab
+cask install zotero
 
 # Remove outdated versions from the cellar
 cleanup
+
