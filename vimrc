@@ -30,6 +30,11 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'christoomey/vim-tmux-navigator'
+
+"
 " ------------------------------------------------------------
 "
 " All of your Plugins must be added before the following line
@@ -205,3 +210,11 @@ set cc=120
 " Go to next or prev buffer
 nmap <C-n> :bnext<CR>
 nmap <C-m> :bprev<CR>
+let g:tmux_navigator_no_mappings = 1
+
+" vim-tmux-navigator mappings
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+"nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
