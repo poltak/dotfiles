@@ -73,6 +73,7 @@ syntax on
 set shiftwidth=2	"1 tab == 2 spaces
 set tabstop=2		"<TAB> == 2 spaces
 set softtabstop=2	"<TAB> and backspace
+set expandtab
 set smarttab		"smart tab
 set autoindent		"set auto indent
 set smartindent		"set smart indent
