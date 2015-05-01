@@ -33,7 +33,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'marijnh/tern_for_vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
+Plugin 'hdima/python-syntax'
+Plugin 'elzr/vim-json'
 
 "
 " ------------------------------------------------------------
@@ -90,7 +94,7 @@ set magic			"magic for regular expression
 set confirm			"ask to save file
 set showcmd			"display incomplete command in the lower right corner of the console
 set undolevels=1000	"let vim allow 1000 undos
-set textwidth=80
+set textwidth=120
 " do not work in hammer. Uncomment for those not on hammer server
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=236
@@ -226,4 +230,11 @@ set backspace=2
 
 " Better pasting with line indents
 set paste
+
+" Remove silly toolbars in gvim/macvim
+if has("gui_running")
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=T
+endif
 
