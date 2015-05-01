@@ -33,6 +33,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'marijnh/tern_for_vim'
 
 "
 " ------------------------------------------------------------
@@ -222,4 +223,7 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 " Allow proper backspacing
 set backspace=2
+
+" Better pasting with line indents
+set paste
 
