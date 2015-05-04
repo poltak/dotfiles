@@ -1,9 +1,21 @@
 {
 	"always_show_minimap_viewport": false,
 	"auto_complete_delay": 50,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": ".",
+			"selector": "source.js"
+		}
+	],
 	"caret_style": "smooth",
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
+	"draw_white_space": "all",
 	"font_face": "Menlo",
 	"font_size": 12,
 	"gpu_window_buffer": true,
@@ -24,6 +36,7 @@
 	"soda_folder_icons": false,
 	"spell_check": true,
 	"tab_size": 2,
+	"theme": "Soda Light 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
