@@ -1,6 +1,6 @@
 {
     // Editor options
-	"editor.wrappingColumn": 120,
+	"editor.wrappingColumn": 300,
 	"editor.mouseWheelScrollSensitivity": 2.5,
 	"editor.quickSuggestionsDelay": 0,
 	"editor.renderWhitespace": true,
