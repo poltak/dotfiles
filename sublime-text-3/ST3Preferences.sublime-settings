@@ -13,7 +13,7 @@
 		}
 	],
 	"caret_style": "smooth",
-	"color_scheme": "Packages/User/SublimeLinter/base16-monokai.dark (SL).tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/base16-solarized.dark.tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_white_space": "all",
 	"font_face": "Source Code Pro Medium",
