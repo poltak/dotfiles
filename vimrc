@@ -22,9 +22,9 @@ Plugin 'tpope/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
-Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -33,11 +33,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-surround'
-Plugin 'hdima/python-syntax'
-Plugin 'elzr/vim-json'
 
 "
 " ------------------------------------------------------------
@@ -237,4 +232,5 @@ if has("gui_running")
   set guioptions-=r
   set guioptions-=T
 endif
+
 
