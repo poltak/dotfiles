@@ -1,4 +1,10 @@
 {
+	"added_words":
+	[
+		"realtime",
+		"analytics",
+		"declarativeness"
+	],
 	"always_show_minimap_viewport": false,
 	"auto_complete_delay": 50,
 	"auto_complete_triggers":
@@ -13,11 +19,11 @@
 		}
 	],
 	"caret_style": "smooth",
-	"color_scheme": "Packages/Base16 Color Schemes/base16-solarized.dark.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/base16-solarized.dark (SL).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_white_space": "all",
-	"font_face": "Source Code Pro Medium",
-	"font_size": 11,
+	"font_face": "Fantasque Sans Mono",
+	"font_size": 13,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"ignored_packages":
@@ -38,5 +44,34 @@
 	"tab_size": 2,
 	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"*.aux",
+		"*.toc",
+		"*.gz",
+		".bibl",
+		".blg",
+		"*.fdb_latexmk"
+	],
 	"trim_trailing_white_space_on_save": true
 }

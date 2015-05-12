@@ -21,7 +21,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
@@ -30,8 +29,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
 Plugin 'christoomey/vim-tmux-navigator'
 
 "
@@ -114,12 +111,6 @@ set ttymouse=xterm2
 
 "instant markdown
 filetype plugin on          "required
-
-"rainbow parens
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 "indenting
 let g:indent_guides_auto_colors = 0
@@ -210,7 +201,7 @@ set cc=120
 
 " Go to next or prev buffer
 nmap <C-n> :bnext<CR>
-nmap <C-m> :bprev<CR>
+nmap <C-p> :bprev<CR>
 let g:tmux_navigator_no_mappings = 1
 
 " vim-tmux-navigator mappings
@@ -233,4 +224,6 @@ if has("gui_running")
   set guioptions-=T
 endif
 
+" Highlight current line
+set cursorline
 
