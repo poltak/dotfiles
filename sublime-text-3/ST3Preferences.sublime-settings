@@ -69,8 +69,8 @@
 		"*.aux",
 		"*.toc",
 		"*.gz",
-		".bibl",
-		".blg",
+		"*.bibl",
+		"*.blg",
 		"*.fdb_latexmk"
 	],
 	"trim_trailing_white_space_on_save": true
