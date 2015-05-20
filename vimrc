@@ -106,7 +106,7 @@ set foldmethod=indent "set fold based on indentation
 "Movement
 set mouse=a				     "mouse support in console (option + mouseclick for mac users)
 set mousehide				 "hide cursor when typing
-set scrolloff=5		         "minimum lines to keep above and below
+set scrolloff=10		         "minimum lines to keep above and below
 set ttymouse=xterm2
 
 "instant markdown
@@ -227,3 +227,5 @@ endif
 " Highlight current line
 set cursorline
 
+" Allow relative line numbers
+set relativenumber
