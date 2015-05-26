@@ -229,3 +229,8 @@ set cursorline
 
 " Allow relative line numbers
 set relativenumber
+
+" Use central directories for swaps and backups
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+
