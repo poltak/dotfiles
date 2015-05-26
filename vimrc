@@ -60,7 +60,7 @@ set nocompatible
 
 " commenting
 set comments=sl:/*,mb:\ *,elx:\ */
-set wildmode=longest:full
+set wildmode=longest:full,list
 set wildmenu
 set t_Co=256
 
@@ -186,7 +186,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown    " *.md support
 
 "spelling
 "map <C-a> :set spell! <CR>
-:nnoremap <C-a> :set spell!<CR>
+nnoremap <C-a> :set spell!<CR>
 
 " automatic Whitespace removal
 autocmd VimEnter,BufReadPost,bufwritepost,bufenter * :FixWhitespace
@@ -233,4 +233,12 @@ set relativenumber
 " Use central directories for swaps and backups
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
+
+" Unbind keys I never use
+nnoremap q <nop>
+nnoremap Q <nop>
+nnoremap K <nop>
+
+" Make Y like D
+nnoremap Y y$
 
