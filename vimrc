@@ -18,16 +18,15 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'edkolev/promptline.vim'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-markdown'
-Plugin 'suan/vim-instant-markdown'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
-Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
 Plugin 'christoomey/vim-tmux-navigator'
 
@@ -36,9 +35,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype indent plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -50,73 +47,22 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-" set UTF-8 encoding
-set enc=utf-8
-set fenc=utf-8
-set termencoding=utf-8
 
-" disable vi compatibility (emulation of old bugs)
-set nocompatible
 
-" commenting
-set comments=sl:/*,mb:\ *,elx:\ */
-set wildmode=longest:full,list
-set wildmenu
-set t_Co=256
 
-syntax on
 
-"tabs and spaces
-set shiftwidth=2	"1 tab == 2 spaces
-set tabstop=2		"<TAB> == 2 spaces
-set softtabstop=2	"<TAB> and backspace
-set expandtab
-set smarttab		"smart tab
-set autoindent		"set auto indent
-set smartindent		"set smart indent
-set copyindent		"use exisiting indents for new indents
-set preserveindent	"save as much indent structure as possible
 
-"UI Config
-set number			"line number
-set showmatch		"highlight matching [({})]
-set mat=2			"for showmatch, set how many tenth of second it blinks
-set ruler			"show current position
-set magic			"magic for regular expression
-set confirm			"ask to save file
-set showcmd			"display incomplete command in the lower right corner of the console
-set undolevels=1000	"let vim allow 1000 undos
-set textwidth=120
-" do not work in hammer. Uncomment for those not on hammer server
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=236
+" = = = = INDENT GUIDES SETTINGS = = = =
 
-"Searching
-set incsearch			   "search as char are entered
-set hlsearch			   "highlight matches
-set smartcase			   "smart with case search
-
-"Folding
-set foldenable	      "enable folds
-set foldlevelstart=10 "prevent too many folds
-set foldmethod=indent "set fold based on indentation
-"can also be marker, manual, expr, syntax, or diff
-"check :help for more information
-
-"Movement
-set mouse=a				     "mouse support in console (option + mouseclick for mac users)
-set mousehide				 "hide cursor when typing
-set scrolloff=10		         "minimum lines to keep above and below
-set ttymouse=xterm2
-
-"instant markdown
-filetype plugin on          "required
-
-"indenting
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkblue
 autocmd VimEnter * :IndentGuidesEnable
+
+
+
+
+" = = = = AIRLINE SETTINGS = = = =
 
 " statusline
 set laststatus=2
@@ -149,13 +95,18 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
+
+
+
+" = = = = SYNTASTIC SETTINGS = = = =
+
 " Syntastic settings recommended
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " enable all checkers on same file
@@ -172,31 +123,98 @@ let g:syntastic_cpp_compiler = 'clang++' " C++ compiler
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++' " C++11 support
 let g:syntastic_cpp_compiler_options = ' -std=c++1y' " C++14 support
 
-"NERDTree
+
+
+
+" = = = = NERDTREE SETTINGS = = = =
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary")
 nmap \q :NERDTreeToggle<CR>
 
-" tagbar
+
+
+
+" = = = = TAGBAR SETTINGS = = = =
+
 nmap \e :TagbarToggle<CR>
 
-" vim-markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown    " *.md support
 
-"spelling
-"map <C-a> :set spell! <CR>
-nnoremap <C-a> :set spell!<CR>
 
+
+" = = = = TRAILING WHITESPACE SETTINGS = = = =
 " automatic Whitespace removal
 autocmd VimEnter,BufReadPost,bufwritepost,bufenter * :FixWhitespace
 
-" malokai theme
+
+
+
+" = = = = THEME SETTINGS = = = =
+" molokai theme
 let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
 
-" line marker
+
+
+
+
+" = = = = MISC SETTINGS = = = =
+" set UTF-8 encoding
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
+" commenting
+set comments=sl:/*,mb:\ *,elx:\ */
+set wildmode=longest:full,list
+set wildmenu
+set t_Co=256
+
+syntax on
+
+"tabs and spaces
+set shiftwidth=2	"1 tab == 2 spaces
+set tabstop=2		"<TAB> == 2 spaces
+set softtabstop=2	"<TAB> and backspace
+set expandtab
+set smarttab		"smart tab
+set autoindent		"set auto indent
+set smartindent		"set smart indent
+set copyindent		"use exisiting indents for new indents
+set preserveindent	"save as much indent structure as possible
+
+"UI Config
+set number			"line number
+set showmatch		"highlight matching [({})]
+set mat=2			"for showmatch, set how many tenth of second it blinks
+set ruler			"show current position
+set magic			"magic for regular expression
+set confirm			"ask to save file
+set showcmd			"display incomplete command in the lower right corner of the console
+set undolevels=1000	"let vim allow 1000 undos
+set textwidth=120
+
+"Searching
+set incsearch			   "search as char are entered
+set hlsearch			   "highlight matches
+set smartcase			   "smart with case search
+
+"Folding
+set foldenable	      "enable folds
+set foldlevelstart=10 "prevent too many folds
+set foldmethod=indent "set fold based on indentation
+"can also be marker, manual, expr, syntax, or diff
+"check :help for more information
+
+"Movement
+set mouse=a				     "mouse support in console (option + mouseclick for mac users)
+set mousehide				 "hide cursor when typing
+set scrolloff=10		         "minimum lines to keep above and below
+set ttymouse=xterm2
+
+"line marker
 set cc=120
 
 " Go to next or prev buffer
@@ -213,9 +231,6 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 
 " Allow proper backspacing
 set backspace=2
-
-" Better pasting with line indents
-set paste
 
 " Remove silly toolbars in gvim/macvim
 if has("gui_running")
