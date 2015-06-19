@@ -257,3 +257,5 @@ nnoremap K <nop>
 " Make Y like D
 nnoremap Y y$
 
+" Toggle pasting on for non-formatted pasting
+set pastetoggle=<F10>
