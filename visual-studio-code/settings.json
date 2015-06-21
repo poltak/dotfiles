@@ -1,24 +1,27 @@
 {
-    // Editor options
-	"editor.wrappingColumn": 300,
-	"editor.mouseWheelScrollSensitivity": 2.5,
-	"editor.quickSuggestionsDelay": 0,
-	"editor.renderWhitespace": true,
-    "editor.tabSize": 2,
-	"editor.insertSpaces": true,
+  // Editor options
+  "editor.wrappingColumn": 300,
+  "editor.mouseWheelScrollSensitivity": 2.5,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.renderWhitespace": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wrappingIndent": "indent",
     
-    // Excluded folder from the directory viewer
-    "search.excludeFolders": [
-        ".git",
-        ".meteor/local",
-        ".idea",
-        "node_modules",
-        "bower_components"
-    ],
+  // Excluded folder from the directory viewer
+  "search.excludeFolders": [
+    ".git",
+    ".meteor/local",
+    ".idea",
+    "node_modules",
+    "bower_components"
+  ],
     
-    // JS stuff
-    "javascript.suggest.alwaysAllWords": true,
-    "javascript.suggest.useCodeSnippetsOnMethodSuggest": true,
-    "javascript.validate.lint.comparisonOperatorsNotStrict": "warning",
-    "javascript.validate.lint.curlyBracketsMustNotBeOmitted": "warning"
+  // JS stuff
+  "javascript.suggest.alwaysAllWords": true,
+  "javascript.suggest.useCodeSnippetsOnMethodSuggest": true,
+  "javascript.validate.lint.comparisonOperatorsNotStrict": "warning",
+  "javascript.validate.lint.curlyBracketsMustNotBeOmitted": "warning",
+  "javascript.validate.semanticValidation": true,
+  "javascript.validate.syntaxValidation": false
 }
