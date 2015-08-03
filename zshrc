@@ -34,3 +34,5 @@ DISABLE_CORRECTION="true"
 plugins=(vi-mode brew brew-cask osx git-extras npm python zsh-syntax-highlighting z meteor tmux web-search )
 
 source $ZSH/oh-my-zsh.sh
+
+source /Users/poltak/.iterm2_shell_integration.zsh
