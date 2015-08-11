@@ -48,7 +48,7 @@
  * Possible errors
  */
     "comma-dangle": [1, "always-multiline"],    // http://eslint.org/docs/rules/comma-dangle
-    "no-cond-assign": [2, "always"], // http://eslint.org/docs/rules/no-cond-assign
+    "no-cond-assign": [1, "except-parens"], // http://eslint.org/docs/rules/no-cond-assign
     "no-console": 0,                 // http://eslint.org/docs/rules/no-console
     "no-debugger": 1,                // http://eslint.org/docs/rules/no-debugger
     "no-alert": 1,                   // http://eslint.org/docs/rules/no-alert
@@ -82,7 +82,7 @@
     "eqeqeq": 2,                     // http://eslint.org/docs/rules/eqeqeq
     "guard-for-in": 2,               // http://eslint.org/docs/rules/guard-for-in
     "no-caller": 2,                  // http://eslint.org/docs/rules/no-caller
-    "no-else-return": 2,             // http://eslint.org/docs/rules/no-else-return
+    "no-else-return": 1,             // http://eslint.org/docs/rules/no-else-return
     "no-eq-null": 2,                 // http://eslint.org/docs/rules/no-eq-null
     "no-eval": 2,                    // http://eslint.org/docs/rules/no-eval
     "no-extend-native": 2,           // http://eslint.org/docs/rules/no-extend-native
@@ -101,7 +101,7 @@
     "no-octal-escape": 2,            // http://eslint.org/docs/rules/no-octal-escape
     "no-param-reassign": 2,          // http://eslint.org/docs/rules/no-param-reassign
     "no-proto": 2,                   // http://eslint.org/docs/rules/no-proto
-    "no-redeclare": 2,               // http://eslint.org/docs/rules/no-redeclare
+    "no-redeclare": 0,               // http://eslint.org/docs/rules/no-redeclare
     "no-return-assign": 2,           // http://eslint.org/docs/rules/no-return-assign
     "no-script-url": 2,              // http://eslint.org/docs/rules/no-script-url
     "no-self-compare": 2,            // http://eslint.org/docs/rules/no-self-compare
@@ -109,7 +109,7 @@
     "no-throw-literal": 2,           // http://eslint.org/docs/rules/no-throw-literal
     "no-with": 2,                    // http://eslint.org/docs/rules/no-with
     "radix": 2,                      // http://eslint.org/docs/rules/radix
-    "vars-on-top": 2,                // http://eslint.org/docs/rules/vars-on-top
+    "vars-on-top": 0,                // http://eslint.org/docs/rules/vars-on-top
     "wrap-iife": [2, "any"],         // http://eslint.org/docs/rules/wrap-iife
     "yoda": 2,                       // http://eslint.org/docs/rules/yoda
     "max-len": [1, 120, 2],           // http://eslint.org/docs/rules/max-len
@@ -117,7 +117,7 @@
 /**
  * Style
  */
-    "indent": [1, 2],                // http://eslint.org/docs/rules/indent
+    "indent": [1, 2, {"VariableDeclarator": 2}],                // http://eslint.org/docs/rules/indent
     "brace-style": [1,               // http://eslint.org/docs/rules/brace-style
       "1tbs", {
       "allowSingleLine": true
@@ -153,7 +153,7 @@
     "no-trailing-spaces": 1,         // http://eslint.org/docs/rules/no-trailing-spaces
     "no-wrap-func": 0,               // http://eslint.org/docs/rules/no-wrap-func
     "no-underscore-dangle": 0,       // http://eslint.org/docs/rules/no-underscore-dangle
-    "one-var": [1, "never"],         // http://eslint.org/docs/rules/one-var
+    "one-var": [0, "never"],         // http://eslint.org/docs/rules/one-var
     "padded-blocks": [1, "never"],   // http://eslint.org/docs/rules/padded-blocks
     "semi": [1, "always"],           // http://eslint.org/docs/rules/semi
     "semi-spacing": [1, {            // http://eslint.org/docs/rules/semi-spacing
