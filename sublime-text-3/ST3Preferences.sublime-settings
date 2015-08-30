@@ -53,12 +53,8 @@
 		"*.blg",
 		"*.fdb_latexmk"
 	],
-	"font_face": "Fantasque Sans Mono",
-	"font_options":
-	[
-		"gray_antialias"
-	],
-	"font_size": 14,
+	"font_face": "Hack",
+	"font_size": 10,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"ignored_packages":
