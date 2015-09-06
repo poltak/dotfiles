@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="pure-gh"
+ZSH_THEME="agnoster"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -35,4 +35,5 @@ plugins=(vi-mode brew brew-cask osx git-extras npm python zsh-syntax-highlightin
 
 source $ZSH/oh-my-zsh.sh
 
-source /Users/poltak/.iterm2_shell_integration.zsh
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
