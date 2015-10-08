@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="agnoster"
+ZSH_THEME="pure-gh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -31,9 +31,8 @@ DISABLE_CORRECTION="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load?
-plugins=(vi-mode brew brew-cask osx git-extras npm python zsh-syntax-highlighting z meteor tmux web-search )
+plugins=(vi-mode brew brew-cask git-extras npm zsh-syntax-highlighting meteor tmux)
 
 source $ZSH/oh-my-zsh.sh
 
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
