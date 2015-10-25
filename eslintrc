@@ -118,7 +118,7 @@
  */
     "indent": [1, 2, {
       "VariableDeclarator": 2,
-      "SwitchCase": 2
+      "SwitchCase": 1
     }],                // http://eslint.org/docs/rules/indent
     "brace-style": [1,               // http://eslint.org/docs/rules/brace-style
       "1tbs", {
