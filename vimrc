@@ -212,7 +212,9 @@ set foldmethod=indent "set fold based on indentation
 set mouse=a				     "mouse support in console (option + mouseclick for mac users)
 set mousehide				 "hide cursor when typing
 set scrolloff=10		         "minimum lines to keep above and below
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 "line marker
 set cc=120
