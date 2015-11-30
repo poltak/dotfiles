@@ -35,4 +35,4 @@ plugins=(vi-mode brew brew-cask git-extras npm zsh-syntax-highlighting meteor tm
 
 source $ZSH/oh-my-zsh.sh
 
-
+eval "$(thefuck --alias)"
