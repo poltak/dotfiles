@@ -15,8 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins to be managed by Vundle
 " ----------------------------------------------------------
-"Plugin 'edkolev/promptline.vim'
-Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -26,10 +24,12 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'majutsushi/tagbar'
 Plugin 'christoomey/vim-tmux-navigator'
-
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'elzr/vim-json'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'altercation/vim-colors-solarized'
 "
 " ------------------------------------------------------------
 "
@@ -49,19 +49,6 @@ filetype indent plugin on
 
 
 
-
-
-
-" = = = = INDENT GUIDES SETTINGS = = = =
-
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkblue
-autocmd VimEnter * :IndentGuidesEnable
-
-
-
-
 " = = = = AIRLINE SETTINGS = = = =
 
 " statusline
@@ -70,11 +57,11 @@ set laststatus=2
 " airline UI
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='tomorrow'
+let g:airline_theme='solarized'
 
 " separators
-let g:airline#extensions#tabline#left_sep = '▶'
-let g:airline#extensions#tabline#left_alt_sep = '▶'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#right_sep = '◀'
 let g:airline#extensions#tabline#right_alt_sep = '◀'
 let g:airline_left_sep = '▶'
@@ -123,6 +110,8 @@ let g:syntastic_cpp_compiler = 'clang++' " C++ compiler
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++' " C++11 support
 let g:syntastic_cpp_compiler_options = ' -std=c++1y' " C++14 support
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 
 
 
@@ -150,17 +139,10 @@ autocmd VimEnter,BufReadPost,bufwritepost,bufenter * :FixWhitespace
 
 
 
-" = = = = THEME SETTINGS = = = =
-" molokai theme
-let g:molokai_original = 1
-let g:rehash256 = 1
-colorscheme molokai
-
-
-
 
 
 " = = = = MISC SETTINGS = = = =
+
 " set UTF-8 encoding
 set enc=utf-8
 set fenc=utf-8
@@ -172,7 +154,10 @@ set wildmode=longest:full,list
 set wildmenu
 set t_Co=256
 
-syntax on
+" solarized settings
+syntax enable
+set background=dark
+colorscheme solarized
 
 "tabs and spaces
 set shiftwidth=2	"1 tab == 2 spaces
@@ -261,3 +246,6 @@ nnoremap Y y$
 
 " Toggle pasting on for non-formatted pasting
 set pastetoggle=<F10>
+
+" Set default vim update UI time
+set updatetime=400
