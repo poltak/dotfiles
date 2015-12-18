@@ -250,6 +250,7 @@ alias update='brew -v update && brew upgrade --all && npm update -g'
 alias ....='../../..'
 alias ...='../..'
 alias pingoo='ping -c 5 www.google.com'
+alias vim='nvim'
 
 
 ##
