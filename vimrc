@@ -30,6 +30,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elzr/vim-json'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jelera/vim-javascript-syntax'
 "
 " ------------------------------------------------------------
 "
