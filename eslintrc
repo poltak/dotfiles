@@ -43,7 +43,6 @@
      * Meteor best practices
      */
     "meteor/audit-argument-checks": 2,
-    "meteor/no-session": 2,
     "meteor/no-blaze-lifecycle-assignment": 2,
     "meteor/no-zero-timeout": 2,
     "meteor/blaze-consistent-eventmap-params": 2,
@@ -81,7 +80,6 @@
     "no-extra-boolean-cast": 1,      // http://eslint.org/docs/rules/no-extra-boolean-cast
     "no-extra-semi": 2,              // http://eslint.org/docs/rules/no-extra-semi
     "no-func-assign": 2,             // http://eslint.org/docs/rules/no-func-assign
-    "no-inner-declarations": 2,      // http://eslint.org/docs/rules/no-inner-declarations
     "no-invalid-regexp": 2,          // http://eslint.org/docs/rules/no-invalid-regexp
     "no-irregular-whitespace": 2,    // http://eslint.org/docs/rules/no-irregular-whitespace
     "no-obj-calls": 2,               // http://eslint.org/docs/rules/no-obj-calls
