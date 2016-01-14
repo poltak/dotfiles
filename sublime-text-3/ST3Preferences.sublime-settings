@@ -19,8 +19,18 @@
 			"selector": "source.js"
 		}
 	],
+	"bold_folder_labels": true,
 	"caret_style": "smooth",
+	// Theme settings
 	"color_inactive_tabs": true,
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"theme": "Material-Theme.sublime-theme",
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_tree_headings": true, // Show siderbar headings
+	"font_face": "Hack",
+	"font_size": 10,
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_white_space": "all",
 	"file_exclude_patterns":
@@ -52,13 +62,16 @@
 		"*.blg",
 		"*.fdb_latexmk"
 	],
-	"font_face": "Hack",
-	"font_size": 10,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
 	],
 	"line_padding_bottom": 0,
 	"line_padding_top": 1,
@@ -76,17 +89,5 @@
 	"tabs_padding_small": true,
 	"tabs_small": true,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-
-	// Theme settings
-	"theme": "Material-Theme.sublime-theme",
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-  "material_theme_small_tab": true, // Set small tabs
-  "material_theme_small_statusbar": true , // Set small status bar
-  "bold_folder_labels": true,
-  "indent_guide_options":    // Highlight active indent
-  [
-  	"draw_normal",
-  	"draw_active"
-  ]
+	"trim_trailing_white_space_on_save": true
 }
