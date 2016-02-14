@@ -148,7 +148,9 @@
     "comma-style": [1, "last"],      // http://eslint.org/docs/rules/comma-style
     "eol-last": 0,                   // http://eslint.org/docs/rules/eol-last
     "func-names": 0,                 // http://eslint.org/docs/rules/func-names
-    "func-style": [1, "declaration"], // http://eslint.org/docs/rules/func-style
+    "func-style": [1, "declaration", {
+      "allowArrowFunctions": true
+    }], // http://eslint.org/docs/rules/func-style
     "key-spacing": [0, {             // http://eslint.org/docs/rules/key-spacing
         "beforeColon": false,
         "afterColon": true
