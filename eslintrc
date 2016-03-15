@@ -18,17 +18,6 @@
   },
   "rules": {
     /**
-     * Meteor plugin rules
-     */
-    "meteor/globals": 2,
-    "meteor/core": 2,
-    "meteor/pubsub": 2,
-    "meteor/methods": 2,
-    "meteor/check": 2,
-    "meteor/connections": 2,
-    "meteor/collections": 2,
-
-    /**
      * Meteor best practices
      */
     "meteor/audit-argument-checks": 2,
@@ -84,7 +73,7 @@
     /**
      * Best practices
      */
-    "consistent-return": 2,          // http://eslint.org/docs/rules/consistent-return
+    "consistent-return": 0,          // http://eslint.org/docs/rules/consistent-return
     "curly": [2, "multi-line"],      // http://eslint.org/docs/rules/curly
     "default-case": 2,               // http://eslint.org/docs/rules/default-case
     "dot-notation": [2, {            // http://eslint.org/docs/rules/dot-notation
