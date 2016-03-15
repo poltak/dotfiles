@@ -31,6 +31,7 @@ Plugin 'elzr/vim-json'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'jdkanani/vim-material-theme'
 "
 " ------------------------------------------------------------
 "
@@ -145,7 +146,7 @@ autocmd VimEnter,BufReadPost,bufwritepost,bufenter * :FixWhitespace
 " = = = = MISC SETTINGS = = = =
 
 " set UTF-8 encoding
-set enc=utf-8
+"set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
@@ -155,10 +156,14 @@ set wildmode=longest:full,list
 set wildmenu
 set t_Co=256
 
-" solarized settings
+" theme settings
 syntax enable
 set background=dark
-colorscheme solarized
+if !has('gui_running')
+    colorscheme dracula
+else
+    colorscheme material-theme
+endif
 
 "tabs and spaces
 set shiftwidth=2	"1 tab == 2 spaces
