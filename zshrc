@@ -66,12 +66,12 @@ else
 	export XDG_CONFIG_DIRS="/etc/xdg:$XDG_CONFIG_DIRS"
 fi
 
-# add ~/bin to $PATH
-path=(~/bin $path)
+# add local bins to $PATH
+path=(~/bin ~/.composer/vendor/bin $path)
 # add ~/.config/zsh/completion to completion paths
 # NOTE: this needs to be a directory with 0755 permissions, otherwise you will
 # get "insecure" warnings on shell load!
-fpath=("$XDG_CONFIG_HOME/zsh/completion" $fpath)
+fpath=("$XDG_CONFIG_HOME/zsh/completion/src" $fpath)
 
 
 ##
@@ -226,6 +226,7 @@ alias perms="stat -c '%A %a %n'"
 alias sudo="sudo "
 
 # git aliases
+alias git='hub'
 alias gpush='git push'
 alias gpull='git pull'
 alias gcommit='git commit'
