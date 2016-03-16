@@ -409,3 +409,13 @@ fi
 
 # Enable vi mode
 bindkey -v
+
+# Add neovim-remote wrapper keys
+if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
+  alias h='nvr -o'
+  alias v='nvr -O'
+  alias t='nvr --remote-tab'
+  alias o='nvr --remote'
+fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
