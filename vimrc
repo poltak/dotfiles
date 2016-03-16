@@ -16,22 +16,19 @@ Plugin 'gmarik/Vundle.vim'
 " Plugins to be managed by Vundle
 " ----------------------------------------------------------
 Plugin 'scrooloose/nerdtree'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Raimondi/delimitMate'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elzr/vim-json'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'jdkanani/vim-material-theme'
+Plugin 'hkupty/nvimux'
+Plugin 'kassio/neoterm'
 "
 " ------------------------------------------------------------
 "
@@ -59,7 +56,7 @@ set laststatus=2
 " airline UI
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='molokai'
 
 " separators
 let g:airline#extensions#tabline#left_sep = ' '
@@ -115,32 +112,19 @@ let g:syntastic_cpp_compiler_options = ' -std=c++1y' " C++14 support
 let g:syntastic_javascript_checkers = ['eslint']
 
 
-
-
 " = = = = NERDTREE SETTINGS = = = =
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary")
 nmap \q :NERDTreeToggle<CR>
-
-
+" Show hidden files
+let g:NERDTreeShowHidden=1
 
 
 " = = = = TAGBAR SETTINGS = = = =
 
 nmap \e :TagbarToggle<CR>
-
-
-
-
-" = = = = TRAILING WHITESPACE SETTINGS = = = =
-" automatic Whitespace removal
-autocmd VimEnter,BufReadPost,bufwritepost,bufenter * :FixWhitespace
-
-
-
-
 
 
 " = = = = MISC SETTINGS = = = =
@@ -213,14 +197,6 @@ set cc=120
 " Go to next or prev buffer
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
-let g:tmux_navigator_no_mappings = 1
-
-" vim-tmux-navigator mappings
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-"nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 " Allow proper backspacing
 set backspace=2
@@ -255,3 +231,22 @@ set pastetoggle=<F10>
 
 " Set default vim update UI time
 set updatetime=400
+
+" Set up NVIMUX (tmux) prefix
+let g:nvimux_prefix='<C-w>'
+
+" neoterm config
+let g:neoterm_position = 'vertical'
+let g:neoterm_automap_keys = ',tt'
+let g:neoterm_size = 120
+
+" neoterm bindings
+
+" show terminal
+nnoremap <silent> ,tq :call neoterm#toggle()<cr>
+nnoremap <silent> ,te :call neoterm#clear()<cr>
+nnoremap <silent> ,tn :call neoterm#new()<cr>
+" kills the current job (send a <c-c>)
+nnoremap <silent> ,tc :call neoterm#kill()<cr>
+" Git commands
+command! -nargs=+ Tg :T git <args>
