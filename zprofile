@@ -10,3 +10,6 @@ export XDG_CONFIG_HOME=~/.config
 # oh-my-zsh plugin configs
 export ZSH_TMUX_AUTOSTART=true
 
+# For neovim-remote
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
