@@ -419,3 +419,6 @@ if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# added by travis gem
+[ -f /Users/poltak/.travis/travis.sh ] && source /Users/poltak/.travis/travis.sh
