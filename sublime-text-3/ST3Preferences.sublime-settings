@@ -19,6 +19,25 @@
 			"selector": "source.js"
 		}
 	],
+	"binary_file_patterns":
+	[
+		"dist/*",
+		".meteor/*",
+		"node_modules/*",
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
+	],
 	"bold_folder_labels": true,
 	"caret_style": "smooth",
 	"color_inactive_tabs": true,
@@ -60,6 +79,10 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"CTags",
+		"Dracula Color Scheme",
+		"Solarized Color Scheme",
+		"Theme - Afterglow",
 		"Vintage"
 	],
 	"ignored_words":
