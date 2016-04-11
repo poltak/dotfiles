@@ -30,7 +30,7 @@
      */
     // babel inserts "use strict"; for us
     // http://eslint.org/docs/rules/strict
-    "strict": [1, "global"],
+    "strict": [0, "global"],
 
     /**
      * Variables
