@@ -73,8 +73,16 @@
 		"*.blg",
 		"*.fdb_latexmk"
 	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
+	],
 	"font_face": "Hack",
-	"font_size": 10,
+	"font_size": 11,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"ignored_packages":
