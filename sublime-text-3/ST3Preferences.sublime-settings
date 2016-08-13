@@ -41,7 +41,8 @@
 	"bold_folder_labels": true,
 	"caret_style": "smooth",
 	"color_inactive_tabs": true,
-	"color_scheme": "Packages/User/SublimeLinter/Material-Theme-OceanicNext (SL).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"theme": "Material-Theme.sublime-theme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_white_space": "all",
 	"file_exclude_patterns":
@@ -79,17 +80,22 @@
 		".git",
 		".hg",
 		"CVS",
+		".meter",
 		"node_modules"
 	],
-	"font_face": "Hack",
-	"font_size": 11,
+	"font_face": "Operator Mono",
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 15,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"ignored_packages":
 	[
 		"CTags",
 		"Dracula Color Scheme",
-		"Solarized Color Scheme",
 		"Theme - Afterglow",
 		"Vintage"
 	],
@@ -103,9 +109,11 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"line_padding_bottom": 0,
-	"line_padding_top": 1,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"material_theme_compact_panel": true,
 	"material_theme_compact_sidebar": true,
+	"material_theme_contrast_mode": true,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
 	"material_theme_tree_headings": true,
@@ -122,7 +130,6 @@
 	"tab_size": 2,
 	"tabs_padding_small": true,
 	"tabs_small": true,
-	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
