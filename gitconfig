@@ -36,3 +36,8 @@
   diffFilter = diff-highlight
 [commit]
 	verbose = true
+[mergetool]
+	keepBackup = false
+[color "diff"]
+	old = red strike
+	new = green italic
