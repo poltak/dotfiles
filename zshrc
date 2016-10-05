@@ -67,7 +67,7 @@ else
 fi
 
 # add local bins to $PATH
-path=(~/bin ~/.composer/vendor/bin $path)
+path=(~/bin ~/.composer/vendor/bin /usr/local/sbin $path)
 # add ~/.config/zsh/completion to completion paths
 # NOTE: this needs to be a directory with 0755 permissions, otherwise you will
 # get "insecure" warnings on shell load!
@@ -247,7 +247,7 @@ alias gstash='git stash'
 alias gmerge='git merge'
 
 # custom aliases
-alias update='brew -v update && brew upgrade --all && npm update -g'
+alias update='brew -v update && brew upgrade && npm update -g'
 alias ....='../../..'
 alias ...='../..'
 alias pingoo='ping -c 5 www.google.com'
