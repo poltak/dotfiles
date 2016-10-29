@@ -422,3 +422,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # added by travis gem
 [ -f /Users/poltak/.travis/travis.sh ] && source /Users/poltak/.travis/travis.sh
+
+export NVM_DIR="/Users/poltak/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
