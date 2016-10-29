@@ -11,5 +11,13 @@
     {
         "key": "cmd+alt+s",
         "command": "workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "cursorColumnSelectUp"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "cursorColumnSelectDown"
     }
 ]
