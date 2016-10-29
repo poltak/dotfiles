@@ -79,8 +79,8 @@
 		".git",
 		".hg",
 		"CVS",
-		".meter",
-		"node_modules"
+		"node_modules",
+		".meteor"
 	],
 	"font_face": "Roboto Mono",
 	"font_options":
