@@ -2,7 +2,7 @@
 {
   "editor.fontFamily": "Operator Mono",
   "editor.fontSize": 13,
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
   "editor.roundedSelection": false,
@@ -13,8 +13,11 @@
   "editor.glyphMargin": true,
   "editor.rulers": [120],
   "editor.renderWhitespace": "all",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
 
   "eslint.enable": true,
+  "eslint.nodePath": "/Users/poltak/.config/yarn/global/node_modules",
 
   "window.reopenFolders": "all",
 
@@ -24,10 +27,9 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "*bundle.js*": true,
+    "*bundle.css*": true,
     "**/.meteor": true
   },
-
-  "typescript.tsdk": "node_modules/typescript/lib",
 
   "markdown.styles": [
     "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
@@ -37,5 +39,15 @@
 
   "python.pythonPath": "/usr/local/bin/python",
 
-  "javascript.suggest.alwaysAllWords": true
+  "vim.useSolidBlockCursor": true,
+  "extensions.autoUpdate": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "workbench.activityBar.visible": true,
+
+  "typescript.tsdk": "/Users/poltak/.config/yarn/global/node_modules/typescript/lib",
+  "typescript.useCodeSnippetsOnMethodSuggest": false,
+  "typescript.tsserver.trace": "messages",
+
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false
 }
