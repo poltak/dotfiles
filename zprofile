@@ -13,3 +13,5 @@ export ZSH_TMUX_AUTOSTART=true
 # For neovim-remote
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
+# Because I'm bored
+export HOMEBREW_INSTALL_BADGE="🍺  🍺  🍺"

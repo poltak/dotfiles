@@ -67,7 +67,7 @@ else
 fi
 
 # add local bins to $PATH
-path=(~/bin ~/.composer/vendor/bin /usr/local/sbin $path)
+path=(~/bin ~/.composer/vendor/bin /usr/local/sbin ~/.config/yarn/global/node_modules/.bin $path)
 # add ~/.config/zsh/completion to completion paths
 # NOTE: this needs to be a directory with 0755 permissions, otherwise you will
 # get "insecure" warnings on shell load!
@@ -423,5 +423,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # added by travis gem
 [ -f /Users/poltak/.travis/travis.sh ] && source /Users/poltak/.travis/travis.sh
 
+export YARN_PATH="/Users/poltak/.config/yarn/global"
 export NVM_DIR="/Users/poltak/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
