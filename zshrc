@@ -28,9 +28,10 @@ else
 		_usercol="$fg[cyan]"
 	fi
 	local _user="%{$_usercol%}%n@%M"
-	local _prompt="%{$fg[white]%}${(r:$SHLVL::%#:)}"
+	local _prompt="%{$fg[white]%}%%"
 
-	PROMPT="$_time $_path $_prompt%b%f%k "
+  NEWLINE=$'\n'
+  PROMPT=" ${_path}${NEWLINE} ${_time} ${_prompt} "
 
 	RPROMPT='${vcs_info_msg_0_}' # git branch
 	if [[ ! -z "$SSH_CLIENT" ]]; then
