@@ -49,5 +49,6 @@
   "typescript.tsserver.trace": "messages",
 
   "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false
+  "telemetry.enableCrashReporter": false,
+  "window.zoomLevel": 0
 }
