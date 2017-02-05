@@ -96,7 +96,7 @@ setopt promptsubst # required for git plugin
 # Colors!
 
 # 256 color mode
-export TERM="xterm-256color"
+export TERM="screen-256color"
 
 # Color aliases
 if command -V dircolors >/dev/null 2>&1; then
@@ -198,12 +198,16 @@ zle -N rationalise-dot
 bindkey . rationalise-dot
 bindkey -M isearch . self-insert # history search fix
 
+# Basic colors working
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 ##
 # Aliases
 #
 
 # some more ls aliases
+alias ls="ls -CF"
 alias l="ls -CF"
 alias ll="ls -l"
 alias la="ls -A"
