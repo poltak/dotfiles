@@ -431,3 +431,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export YARN_PATH="/Users/poltak/.config/yarn/global"
 export NVM_DIR="/Users/poltak/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# alias to extract .m4a files from youtube videos
+alias yt-m4a="youtube-dl --extract-audio --audio-format m4a --audio-quality 0"
