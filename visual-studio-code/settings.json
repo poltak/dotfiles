@@ -15,6 +15,10 @@
   "editor.renderWhitespace": "all",
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "solid",
+  "editor.dragAndDrop": true,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "window.title": "${activeEditorShort}${separator}${rootName} ${dirty}",
 
   "eslint.enable": true,
   "eslint.nodePath": "/Users/poltak/.config/yarn/global/node_modules",
@@ -50,5 +54,8 @@
 
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "workbench.sideBar.location": "left",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "vs-seti"
 }
