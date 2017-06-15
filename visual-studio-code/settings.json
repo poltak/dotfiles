@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
   "editor.fontFamily": "Operator Mono",
-  "editor.fontSize": 13,
+  "editor.fontSize": 15,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": true,
@@ -16,14 +16,17 @@
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "solid",
   "editor.dragAndDrop": true,
-  "editor.wordWrap": "bounded",
+  "editor.wordWrap": "off",
   "editor.wordWrapColumn": 120,
-  "window.title": "${activeEditorShort}${separator}${rootName} ${dirty}",
+  "editor.renderIndentGuides": true,
 
   "eslint.enable": true,
+  "eslint.run": "onSave",
   "eslint.nodePath": "/Users/poltak/.config/yarn/global/node_modules",
 
+  "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
   "window.reopenFolders": "all",
+  "window.zoomLevel": -1,
 
   "files.trimTrailingWhitespace": true,
 
@@ -43,10 +46,8 @@
 
   "python.pythonPath": "/usr/local/bin/python",
 
-  "vim.useSolidBlockCursor": true,
   "extensions.autoUpdate": true,
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.activityBar.visible": true,
 
   "typescript.tsdk": "/Users/poltak/.config/yarn/global/node_modules/typescript/lib",
   "typescript.useCodeSnippetsOnMethodSuggest": false,
@@ -54,8 +55,22 @@
 
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": false,
   "workbench.sideBar.location": "left",
-  "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "vs-seti"
+  "workbench.colorTheme": "One Monokai",
+  "workbench.iconTheme": "vs-seti",
+
+  "puglint.enable": true,
+
+  "explorer.autoReveal": false,
+  "vim.useSolidBlockCursor": true,
+  "vim.disableAnnoyingNeovimMessage": true,
+  "vim.enableNeovim": false,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.useSystemClipboard": true,
+  "vim.disableAnnoyingGcMessage": true,
+
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false
 }
