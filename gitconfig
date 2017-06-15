@@ -7,7 +7,14 @@
 	editor = vim
 	excludesfile = /Users/poltak/.gitignore_global
 [merge]
-	tool = opendiff
+	tool = vscode
+[mergetool "vscode"]
+	keepBackup = false
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [credential]
 	helper = osxkeychain
 [color]
@@ -19,9 +26,6 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
-[diff]
-	external = /Users/poltak/bin/git-diff-cmd.sh
-	compactionHeuristic = true
 [pager]
   log = diff-highlight | less
   show = diff-highlight | less
@@ -30,8 +34,6 @@
   diffFilter = diff-highlight
 [commit]
 	verbose = true
-[mergetool]
-	keepBackup = false
 [color "diff"]
 	old = red strike
 	new = green italic
