@@ -4,7 +4,7 @@
 [push]
 	default = tracking
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = /Users/poltak/.gitignore_global
 [merge]
 	tool = vscode
