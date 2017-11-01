@@ -1,76 +1,122 @@
-// Place your settings in this file to overwrite the default settings
 {
-  "editor.fontFamily": "Operator Mono",
-  "editor.fontSize": 15,
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": true,
-  "editor.roundedSelection": false,
-  "editor.mouseWheelScrollSensitivity": 1,
-  "editor.lineHeight": 20,
-  "editor.quickSuggestions": true,
-  "editor.quickSuggestionsDelay": 1,
-  "editor.glyphMargin": true,
-  "editor.rulers": [120],
-  "editor.renderWhitespace": "all",
-  "editor.cursorStyle": "block",
-  "editor.cursorBlinking": "solid",
-  "editor.dragAndDrop": true,
-  "editor.wordWrap": "off",
-  "editor.wordWrapColumn": 120,
-  "editor.renderIndentGuides": true,
+    // Place your settings in this file to overwrite the default settings
+    // "editor.fontFamily": "Operator Mono",
+    "editor.fontFamily": "Hasklig",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.letterSpacing": 0.5,
+    "editor.detectIndentation": true,
+    "editor.roundedSelection": false,
+    "editor.mouseWheelScrollSensitivity": 1,
+    "editor.lineHeight": 23,
+    "editor.quickSuggestions": true,
+    "editor.quickSuggestionsDelay": 1,
+    "editor.glyphMargin": true,
+    "editor.rulers": [120],
+    "editor.renderWhitespace": "none",
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "solid",
+    "editor.dragAndDrop": true,
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 120,
+    "editor.renderIndentGuides": true,
+    "editor.minimap.enabled": false,
 
-  "eslint.enable": true,
-  "eslint.run": "onSave",
-  "eslint.nodePath": "/Users/poltak/.config/yarn/global/node_modules",
+    "eslint.enable": true,
+    "eslint.run": "onType",
+    "eslint.nodePath": "/Users/poltak/.config/yarn/global/node_modules",
 
-  "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
-  "window.reopenFolders": "all",
-  "window.zoomLevel": -1,
+    "window.title": "${rootName}${separator}${activeEditorMedium} ${dirty}",
+    "window.zoomLevel": -1,
+    "window.nativeTabs": true,
 
-  "files.trimTrailingWhitespace": true,
+    "files.trimTrailingWhitespace": true,
 
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "*bundle.js*": true,
-    "*bundle.css*": true,
-    "**/.meteor": true
-  },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "*bundle.js*": true,
+        "*bundle.css*": true,
+        "**/.meteor": true,
+        "**/extension": true
+    },
 
-  "markdown.styles": [
-    "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
-  ],
+    "markdown.styles": [
+        "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
+    ],
 
-  "git.path": "/usr/local/bin/git",
+    "git.path": "/usr/local/bin/git",
 
-  "python.pythonPath": "/usr/local/bin/python",
+    "python.pythonPath": "/usr/local/bin/python",
 
-  "extensions.autoUpdate": true,
-  "terminal.external.osxExec": "iTerm.app",
+    "extensions.autoUpdate": true,
 
-  "typescript.tsdk": "/Users/poltak/.config/yarn/global/node_modules/typescript/lib",
-  "typescript.useCodeSnippetsOnMethodSuggest": false,
-  "typescript.tsserver.trace": "messages",
+    "typescript.tsdk":
+        "/Users/poltak/.config/yarn/global/node_modules/typescript/lib",
+    "typescript.useCodeSnippetsOnMethodSuggest": true,
+    "typescript.tsserver.trace": "messages",
+    "typescript.npm": "/Users/poltak/.nvm/versions/node/v8.4.0/bin/npm",
 
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false,
-  "workbench.activityBar.visible": false,
-  "workbench.sideBar.location": "left",
-  "workbench.colorTheme": "One Monokai",
-  "workbench.iconTheme": "vs-seti",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "One Monokai",
+    "workbench.iconTheme": "vs-seti",
 
-  "puglint.enable": true,
+    "puglint.enable": true,
 
-  "explorer.autoReveal": false,
-  "vim.useSolidBlockCursor": true,
-  "vim.disableAnnoyingNeovimMessage": true,
-  "vim.enableNeovim": false,
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.useSystemClipboard": true,
-  "vim.disableAnnoyingGcMessage": true,
+    "explorer.autoReveal": false,
+    "stylelint.enable": true,
+    "css.validate": false,
+    "scss.validate": false,
 
-  "stylelint.enable": true,
-  "css.validate": false,
-  "scss.validate": false
+    "php.suggest.basic": false,
+
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+
+    // 3rd party extensions
+    "auto-close-tag.SublimeText3Mode": true,
+    "auto-close-tag.enableAutoCloseTag": false,
+
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColorControl": false,
+    "vim.statusBarColors": {
+        "normal": "#005f5f",
+        "insert": "#5f0000",
+        "visual": "#5f00af",
+        "visualline": "#005f87",
+        "visualblock": "#86592d",
+        "replace": "#000000"
+    },
+
+    "gitProjectManager.storeRepositoriesBetweenSessions": true,
+    "gitProjectManager.openInNewWindow": true,
+    "gitProjectManager.baseProjectsFolders": ["/Users/poltak/Documents/github"],
+
+    "npm.runInTerminal": true,
+    "sync.gist": "755cbdd078eab0107e04251815bfec85",
+    "sync.lastUpload": "2017-09-27T14:55:12.590Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#5f00af",
+        "statusBar.noFolderBackground": "#5f00af",
+        "statusBar.debuggingBackground": "#5f00af"
+    }
 }
