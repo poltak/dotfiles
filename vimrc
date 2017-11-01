@@ -4,128 +4,36 @@ autocmd! bufwritepost .vimrc source %
 set nocompatible              " be iMproved, required
 filetype on                   " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Plugins to be managed by Vundle
+" Plugins
 " ----------------------------------------------------------
-Plugin 'scrooloose/nerdtree'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'Raimondi/delimitMate'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/syntastic'
-Plugin 'majutsushi/tagbar'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'elzr/vim-json'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'jdkanani/vim-material-theme'
-Plugin 'hkupty/nvimux'
-Plugin 'kassio/neoterm'
-"
+call plug#begin('~/.vim/plugged')
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
+Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'ntpeters/vim-better-whitespace'
+"Plugin 'Raimondi/delimitMate'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'elzr/vim-json'
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'jdkanani/vim-material-theme'
+"Plugin 'hkupty/nvimux'
+"Plugin 'kassio/neoterm'
+call plug#end()
+
+""
 " ------------------------------------------------------------
 "
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype indent plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
-
-
-" = = = = AIRLINE SETTINGS = = = =
-
-" statusline
-set laststatus=2
-
-" airline UI
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
-
-" separators
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#right_sep = '◀'
-let g:airline#extensions#tabline#right_alt_sep = '◀'
-let g:airline_left_sep = '▶'
-let g:airline_left_alt_sep = '▶'
-let g:airline_right_sep = '◀'
-let g:airline_right_alt_sep = '◀'
-"let g:airline_symbols.branch = '▶'
-"let g:airline_symbols.readonly = '▶'
-"let g:airline_symbols.linenr = '▶'
-
-function! AirlineInit()
-	let g:airline_section_a = airline#section#create(['mode',' ','branch'])
-	let g:airline_section_b = airline#section#create_left(['%F'])
-	let g:airline_section_c = airline#section#create(['ffenc',' ','[%Y]'])
-	let g:airline_section_x = airline#section#create(['%P'])   "P
-	let g:airline_section_y = airline#section#create(['row:%l/%L ','(%03p%%)'])
-	let g:airline_section_z = airline#section#create_right(['col:%03c'])
-endfunction
-autocmd VimEnter * call AirlineInit()
-
-
-
-
-" = = = = SYNTASTIC SETTINGS = = = =
-
-" Syntastic settings recommended
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-
-" enable all checkers on same file
-let g:syntastic_aggregate_errors = 1
-
-" enable syntax checkers
-let g:syntastic_c_checkers = ['gcc']
-let g:syntastic_cpp_checkers = ['cppcheck' , 'gcc' , 'make']
-let g:syntastic_matlab_checkers = ['mlint']
-let g:syntastic_markdown_checkers = ['mdl']
-let g:syntastic_text_checkers = ['language_check' , 'atdtool']
-
-let g:syntastic_cpp_compiler = 'clang++' " C++ compiler
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++' " C++11 support
-let g:syntastic_cpp_compiler_options = ' -std=c++1y' " C++14 support
-
-let g:syntastic_javascript_checkers = ['eslint']
-
-
-" = = = = NERDTREE SETTINGS = = = =
-
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary")
-nmap \q :NERDTreeToggle<CR>
-" Show hidden files
-let g:NERDTreeShowHidden=1
-
-
-" = = = = TAGBAR SETTINGS = = = =
-
-nmap \e :TagbarToggle<CR>
-
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_debug = 1
+let g:deoplete#enable_profile = 1
 
 " = = = = MISC SETTINGS = = = =
 
@@ -143,11 +51,11 @@ set t_Co=256
 " theme settings
 syntax enable
 set background=dark
-if !has('gui_running')
-    colorscheme dracula
-else
-    colorscheme material-theme
-endif
+"if !has('gui_running')
+    "colorscheme dracula
+"else
+    "colorscheme material-theme
+"endif
 
 "tabs and spaces
 set shiftwidth=2	"1 tab == 2 spaces
@@ -235,18 +143,3 @@ set updatetime=400
 " Set up NVIMUX (tmux) prefix
 let g:nvimux_prefix='<C-w>'
 
-" neoterm config
-let g:neoterm_position = 'vertical'
-let g:neoterm_automap_keys = ',tt'
-let g:neoterm_size = 120
-
-" neoterm bindings
-
-" show terminal
-nnoremap <silent> ,tq :call neoterm#toggle()<cr>
-nnoremap <silent> ,te :call neoterm#clear()<cr>
-nnoremap <silent> ,tn :call neoterm#new()<cr>
-" kills the current job (send a <c-c>)
-nnoremap <silent> ,tc :call neoterm#kill()<cr>
-" Git commands
-command! -nargs=+ Tg :T git <args>
